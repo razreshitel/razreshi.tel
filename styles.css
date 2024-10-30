@@ -33,12 +33,16 @@ body {
     object-fit: cover; /* Обеспечивает сохранение пропорций */
 }
 
-
 /* Контактная информация */
 h1 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 1.4em;
     color: #333;
+}
+
+.name-subtitle {
+    font-size: 0.9em; /* Меньший размер шрифта */
+    color: #666; /* Бледный цвет */
+    margin-bottom: 10px;
 }
 
 .contact-info a {
@@ -50,13 +54,27 @@ h1 {
     text-decoration: underline;
 }
 
+/* Зона соцсетей */
+.social-section {
+    background-color: #daecf5; /* Светло-голубой фон */
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 10px 0; /* Сокращенный вариант margin */
+    box-shadow: 0 2px 8px rgba(0, 115, 230, 0.2); /* Легкая голубая тень */
+}
+
+.social-section h2 {
+    font-size: 1.1em;
+    color: #0053c6; /* Голубой цвет заголовка */
+    margin-bottom: 15px;
+}
+
 /* Вертикальные ссылки на соцсети с иконками */
 .social-links {
-    margin-top: 15px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    gap: 12px;
+    align-items: flex-start; /* Выравнивание по левому краю */
 }
 
 .social-links a {
@@ -66,6 +84,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 8px;
+    padding-left: 10px; /* Отступ слева для смещения текста */
 }
 
 .social-links a i {
