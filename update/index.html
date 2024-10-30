@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обновление репозитория</title>
-	<link rel="stylesheet" href="css/style.css">
+    <title>Обновление репозитория и мониторинг Uptime</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <button id="updateButton">
-		<img src="css/gear.png" alt="Update Icon">
-		<div class="under-button-text">Update</div>
-	</button>
+        <img src="css/gear.png" alt="Update Icon">
+        <div class="under-button-text">Update</div>
+    </button>
+
+    <!-- Добавляем кнопку для обновления uptime -->
+    <button id="refreshUptimeButton">
+        Обновить Uptime
+    </button>
+
+    <!-- Контейнер для графика uptime -->
+    <div class="uptime-container">
+        <canvas id="uptimeChart"></canvas>
+    </div>
 
     <!-- Подключаем JavaScript -->
-    <script src="git_fetch.js"></script>
+    <script src="scripts/git_fetch.js"></script>
+    <script src="scripts/uptime_chart.js"></script>
 </body>
 </html>
