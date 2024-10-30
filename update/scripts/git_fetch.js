@@ -2,7 +2,7 @@
 document.getElementById('updateButton').addEventListener('click', async () => {
     try {
         // Запросим первые 5 строк из log.txt
-        const logResponse = await fetch('update_repo.php?getLog=true');
+        const logResponse = await fetch('scripts/update_repo.php?getLog=true');
         const logText = await logResponse.text();
 
         // Добавляем 5 строк лога в запрос пароля
@@ -10,7 +10,7 @@ document.getElementById('updateButton').addEventListener('click', async () => {
 
         if (password) {
             // Отправляем запрос на сервер с паролем
-            const response = await fetch('update_repo.php', {
+            const response = await fetch('scripts/update_repo.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: 'password=' + encodeURIComponent(password)
