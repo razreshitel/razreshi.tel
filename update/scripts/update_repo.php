@@ -28,7 +28,7 @@ if ($inputPassword !== $storedPasswordHash) {
 
 // Обновление репозитория
 echo "Пароль верен. Обновляем репозиторий...\n";
-exec("cd $gitDir && git fetch --all && git reset --hard origin/main 2>&1", $output, $returnCode);
+exec("cd $gitDir && git pull 2>&1", $output, $returnCode);
 
 if ($returnCode === 0) {
     echo "Репозиторий успешно обновлен.";
