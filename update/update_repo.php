@@ -4,6 +4,7 @@ $storedPasswordHash = 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f
 
 // Путь к файлу log.txt
 $logFilePath = './log.txt';
+$gitDir = '../'; // Путь к директории с .git один уровень выше
 
 // Проверяем, запрашиваются ли только первые 5 строк лога
 if (isset($_GET['getLog']) && $_GET['getLog'] === 'true') {
@@ -27,7 +28,7 @@ if ($inputPassword !== $storedPasswordHash) {
 
 // Обновление репозитория
 echo "Пароль верен. Обновляем репозиторий...\n";
-exec("git fetch --all && git reset --hard origin/main 2>&1", $output, $returnCode);
+exec("cd $gitDir && git fetch --all && git reset --hard origin/main 2>&1", $output, $returnCode);
 
 if ($returnCode === 0) {
     echo "Репозиторий успешно обновлен.";
