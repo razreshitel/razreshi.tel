@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Philippov">
+  <defs>
+    <linearGradient id="pa" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff6a3d"/>
+      <stop offset="0.5" stop-color="#2ec4b6"/>
+      <stop offset="1" stop-color="#7b76ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#141417"/>
+  <text x="32" y="47" text-anchor="middle" font-family="'Century Gothic','Jost','Avant Garde',ui-sans-serif,system-ui,sans-serif" font-weight="700" font-size="44" fill="url(#pa)">P</text>
+</svg>
