@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <title>HexPlor'itel — Philippov A.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Jost:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body style="--accent:#e0599c;">
+  <div class="page">
+    <a class="back" href="../index.html"><span>←</span> Back to all work</a>
+
+    <section class="proj-hero">
+      <span class="proj-eyebrow"><span class="dot"></span> PROJECT · hexploritel</span>
+      <h1 class="proj-title">HexPlor'itel</h1>
+      <p class="proj-lede">
+        An offline-first Android map app that turns walking into a personal fog-of-war: draw an
+        area and its grey hexagons clear as you physically move through it. Built for
+        GPS-spoofing-heavy cities, with a filter chain that rejects mock, teleport and
+        low-accuracy fixes before they ever touch your track or coverage.
+      </p>
+
+      <div class="proj-tags">
+        <span class="chip">Kotlin</span>
+        <span class="chip">Jetpack Compose</span>
+        <span class="chip">MapLibre Native · PMTiles</span>
+        <span class="chip">Uber H3</span>
+        <span class="chip">Room</span>
+        <span class="chip">offline-first</span>
+        <span class="chip">GPX</span>
+      </div>
+
+      <div class="proj-actions">
+        <a class="btn" href="../index.html">← Back to all work</a>
+      </div>
+    </section>
+
+    <div class="proj-soon">
+      <div class="soon-icon">✶</div>
+      <div>
+        <strong>Full write-up coming soon</strong>
+        The spoof-rejection filter chain, PMTiles range-reads for downloading single regions,
+        and the global H3-res-11 coverage model (redraw an area without losing progress) will live here.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
