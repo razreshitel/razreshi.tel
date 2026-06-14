@@ -83,12 +83,21 @@
             <div class="project__visual">
               <div class="project__img">
                 <svg viewBox="0 0 320 220" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-                  <rect class="vline" x="40" y="55" width="150" height="110" rx="14"/>
-                  <rect class="vfill" x="58" y="74" width="92" height="50" rx="6"/>
-                  <circle class="vline" cx="86" cy="142" r="9"/>
-                  <rect class="vline" x="110" y="136" width="58" height="12" rx="6"/>
-                  <path class="vdash" d="M196 95 C 235 95, 235 135, 270 130"/>
-                  <path class="vfill" d="M250 88 l34 14 -16 6 -2 18 -16-38z"/>
+                  <!-- rounded trapezoid body -->
+                  <path class="vline" d="M72.3 62 Q79 52 91 52 L229 52 Q241 52 250.6 59.3 L277.5 79.7 Q287 87 287 99 L287 155 Q287 167 275 167 L91 167 Q79 167 70.5 158.5 L41.5 129.5 Q33 121 39.7 111 Z"/>
+                  <!-- orange screen -->
+                  <rect class="vfill" style="opacity:1" x="90" y="74" width="92" height="68" rx="7"/>
+                  <!-- black Telegram plane, rotated 90° clockwise -->
+                  <path style="fill:#141417" transform="rotate(90 136 108)" d="M119 89 l34 14 -16 6 -2 18 -16-38z"/>
+                  <!-- D-pad: ring, centre, four direction chevrons -->
+                  <circle class="vline" cx="234" cy="108" r="29"/>
+                  <circle class="vline" cx="234" cy="108" r="8.5"/>
+                  <polyline class="vline" points="227,94 234,88 241,94" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline class="vline" points="227,122 234,128 241,122" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline class="vline" points="219,101 213,108 219,115" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline class="vline" points="249,101 255,108 249,115" stroke-linecap="round" stroke-linejoin="round"/>
+                  <!-- empty back button -->
+                  <circle class="vline" cx="268" cy="142" r="9.5"/>
                 </svg>
               </div>
               <div class="project__dither" aria-hidden="true">
