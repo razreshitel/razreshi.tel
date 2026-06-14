@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexander Philippov — builder of self-hosted tools</title>
+  <meta name="description" content="Alexander Philippov (razreshitel) — self-hosted, privacy-first tools at the seam of software and hardware." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Jost:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- ============ HEADER / HERO ============ -->
+    <header class="hero">
+      <div class="hero__identity">
+        <h1 class="hero__name">Alexander&nbsp;Philippov</h1>
+        <p class="hero__name-ru">Александр&nbsp;Филиппов</p>
+
+        <nav class="socials" aria-label="Social links">
+          <a class="social" href="https://github.com/razreshitel" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.8 1.08.8 2.18v3.23c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+            <span>Razreshitel</span>
+          </a>
+          <a class="social" href="https://t.me/Triantaexi" target="_blank" rel="noopener" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M9.78 15.6 9.6 19.9c.39 0 .56-.17.77-.37l1.85-1.78 3.84 2.8c.7.39 1.2.18 1.39-.65l2.52-11.8c.23-1.06-.38-1.47-1.07-1.21L4.36 11.2c-1.03.4-1.02.97-.18 1.23l3.96 1.23 9.2-5.8c.43-.28.82-.13.5.16"/></svg>
+            <span>Triantaexi</span>
+          </a>
+          <a class="social" href="https://x.com/TriantaExi" target="_blank" rel="noopener" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.82-5.96 6.82H1.66l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.01 4.12H5.04l12.04 15.65Z"/></svg>
+            <span>TriantaExi</span>
+          </a>
+          <a class="social" href="mailto:philippov44@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M3 6.5h18v11H3z"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="m3.5 7 8.5 6 8.5-6"/></svg>
+            <span>email</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="hero__bio">
+        <p>
+          I build <strong>self-hosted, privacy-first tools</strong> that live at the seam
+          between software and hardware — AI workspaces, browser tooling, firmware bridges,
+          and autonomous control systems.
+        </p>
+        <p class="hero__bio-dim">
+          Mostly <span class="mono">Python</span> and <span class="mono">C</span>, with a soft spot
+          for things that run on my own machine and answer to no one else. If it can be local,
+          auditable, and a little bit over-engineered — I'm interested.
+        </p>
+      </div>
+    </header>
+
+    <!-- ============ PROJECTS ============ -->
+    <main>
+      <div class="section-head">
+        <h2>Selected work</h2>
+      </div>
+
+      <ul class="projects">
+
+        <!-- Flipper-TG -->
+        <li>
+          <a class="project" href="projects/flipper-tg.html" style="--accent:#ff6a3d;">
+            <div class="project__visual">
+              <div class="project__img">
+                <svg viewBox="0 0 320 220" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <rect class="vline" x="40" y="55" width="150" height="110" rx="14"/>
+                  <rect class="vfill" x="58" y="74" width="92" height="50" rx="6"/>
+                  <circle class="vline" cx="86" cy="142" r="9"/>
+                  <rect class="vline" x="110" y="136" width="58" height="12" rx="6"/>
+                  <path class="vdash" d="M196 95 C 235 95, 235 135, 270 130"/>
+                  <path class="vfill" d="M250 88 l34 14 -16 6 -2 18 -16-38z"/>
+                </svg>
+              </div>
+              <div class="project__dither" aria-hidden="true">
+                <span class="dband dband--lg"></span>
+                <span class="dband dband--md"></span>
+                <span class="dband dband--sm"></span>
+              </div>
+            </div>
+            <div class="project__body">
+              <span class="project__tag mono">C · Python · Raspberry&nbsp;Pi</span>
+              <h3 class="project__title">Telegram bot bridge for Flipper&nbsp;Zero</h3>
+              <p class="project__desc">
+                Browse and send Telegram messages straight from a Flipper Zero's 128×64 screen.
+                A self-hosted Pi server + FastAPI backend talks to a custom FAP app over an
+                ESP32 Wi-Fi bridge — Cyrillic transliteration, paginated chats, on-device keyboard.
+              </p>
+              <span class="project__cta">Open project <span class="arrow">→</span></span>
+            </div>
+          </a>
+        </li>
+
+        <!-- StreamGrabitel -->
+        <li>
+          <a class="project project--reverse" href="projects/streamgrabitel.html" style="--accent:#2ec4b6;">
+            <div class="project__visual">
+              <div class="project__img">
+                <svg viewBox="0 0 320 220" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <rect class="vline" x="56" y="50" width="150" height="92" rx="12"/>
+                  <path class="vfill" d="M112 76 l40 20 -40 20z"/>
+                  <path class="vline" d="M131 150 v34" stroke-linecap="round"/>
+                  <path class="vfill" d="M114 168 l17 20 17-20z"/>
+                  <rect class="vline" x="92" y="190" width="78" height="14" rx="7"/>
+                  <circle class="vdot" cx="232" cy="74" r="5"/>
+                  <circle class="vdot" cx="252" cy="96" r="5"/>
+                  <circle class="vdot" cx="232" cy="118" r="5"/>
+                </svg>
+              </div>
+              <div class="project__dither" aria-hidden="true">
+                <span class="dband dband--lg"></span>
+                <span class="dband dband--md"></span>
+                <span class="dband dband--sm"></span>
+              </div>
+            </div>
+            <div class="project__body">
+              <span class="project__tag mono">JavaScript · yt-dlp · ffmpeg</span>
+              <h3 class="project__title">StreamGrab'itel</h3>
+              <p class="project__desc">
+                A Chrome extension that detects and downloads video from YouTube, HLS/DASH
+                streams and ~1800 sites — entirely local. Browser-side detection pairs with a
+                Node native-messaging host running open-source yt-dlp + ffmpeg. No uploads,
+                fully auditable, MIT-licensed.
+              </p>
+              <span class="project__cta">Open project <span class="arrow">→</span></span>
+            </div>
+          </a>
+        </li>
+
+        <!-- KSP autopilot -->
+        <li>
+          <a class="project" href="projects/ksp-autopilot.html" style="--accent:#7b76ff;">
+            <div class="project__visual">
+              <div class="project__img">
+                <svg viewBox="0 0 320 220" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <path class="vline" d="M30 168 h260" stroke-linecap="round"/>
+                  <path class="vline" d="M150 44 c14 0 22 14 22 34 v44 h-44 v-44 c0-20 8-34 22-34z"/>
+                  <circle class="vfill" cx="150" cy="82" r="8"/>
+                  <path class="vline" d="M128 110 l-18 24 18-6z"/>
+                  <path class="vline" d="M172 110 l18 24 -18-6z"/>
+                  <path class="vflame" d="M139 124 h22 l-6 22 -5-10 -5 10z"/>
+                  <path class="vdash" d="M150 168 v-28" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="project__dither" aria-hidden="true">
+                <span class="dband dband--lg"></span>
+                <span class="dband dband--md"></span>
+                <span class="dband dband--sm"></span>
+              </div>
+            </div>
+            <div class="project__body">
+              <span class="project__tag mono">Python · kRPC · control&nbsp;theory</span>
+              <h3 class="project__title">Autonomous Landing &amp; Flight Control Agent for KSP</h3>
+              <p class="project__desc">
+                A guidance agent that flies and lands rockets in Kerbal Space Program with no
+                human input. Live telemetry over kRPC feeds a closed-loop controller: suicide-burn
+                timing, throttle &amp; gimbal PID, and touchdown within metres of a target — the
+                kind of powered descent you'd otherwise watch SpaceX do.
+              </p>
+              <span class="project__cta">Open project <span class="arrow">→</span></span>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </main>
+
+  </div>
+</body>
+</html>
