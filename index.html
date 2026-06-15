@@ -57,14 +57,12 @@
 
       <div class="hero__bio">
         <p>
-          I build <strong>self-hosted, privacy-first tools</strong> that live at the seam
-          between software and hardware — AI workspaces, browser tooling, firmware bridges,
-          and autonomous control systems.
+          I build <strong>self-hosted, privacy-first tools</strong> — AI workspaces, browser tooling, firmware bridges,
+          and autonomous control systems. 
         </p>
         <p class="hero__bio-dim">
-          Mostly <span class="mono">Python</span> and <span class="mono">C</span>, with a soft spot
-          for things that run on my own machine and answer to no one else. If it can be local,
-          auditable, and a little bit over-engineered — I'm interested.
+          Mostly <span class="mono">Python</span> or <span class="mono">C</span>, open-source tools, things that run on my own machine and don't rely on outside infrastructure. If it can be local and
+          auditable — I'm interested.
         </p>
       </div>
     </header>
@@ -110,9 +108,9 @@
               <span class="project__tag mono">C · Python · Raspberry&nbsp;Pi</span>
               <h3 class="project__title">Telegram bot bridge for Flipper&nbsp;Zero</h3>
               <p class="project__desc">
-                Browse and send Telegram messages straight from a Flipper Zero's 128×64 screen.
+                Browse and send Telegram messages straight from a Flipper Zero's screen.
                 A self-hosted Pi server + FastAPI backend talks to a custom FAP app over an
-                ESP32 Wi-Fi bridge — Cyrillic transliteration, paginated chats, on-device keyboard.
+                ESP32 Wi-Fi bridge — Cyrillic transliteration, paginated chats, on-device keyboard, secured communications.
               </p>
               <span class="project__cta">Open project <span class="arrow">→</span></span>
             </div>
@@ -146,11 +144,9 @@
               <span class="project__tag mono">Kotlin · Compose · MapLibre · Uber&nbsp;H3</span>
               <h3 class="project__title">HexPlor'itel</h3>
               <p class="project__desc">
-                An offline-first Android map app that turns walking into a game: draw an area and it
-                fills with grey hexagons that clear as you physically move through it — a fog-of-war
-                for the real world. Built for GPS-spoofing-heavy cities, so a streaming filter chain
-                drops mock, teleport and low-accuracy fixes before they touch your track. Offline
-                PMTiles maps, GPX export, and global H3-res-11 coverage that survives redraws.
+                An Android map app that turns walking into a game: draw an area for 
+                hexagons that clear as you physically move through it — a fog-of-war
+                for the real world. Built with GPS-spoof protection.
               </p>
               <span class="project__cta">Open project <span class="arrow">→</span></span>
             </div>
@@ -183,10 +179,8 @@
               <span class="project__tag mono">JavaScript · yt-dlp · ffmpeg</span>
               <h3 class="project__title">StreamGrab'itel</h3>
               <p class="project__desc">
-                A Chrome extension that detects and downloads video from YouTube, HLS/DASH
-                streams and ~1800 sites — entirely local. Browser-side detection pairs with a
-                Node native-messaging host running open-source yt-dlp + ffmpeg. No uploads,
-                fully auditable, MIT-licensed.
+                A Chrome extension that detects and downloads video stream from any web-page. YouTube, HLS/MPEG-DASH
+                streams or direct files. No uploads, fully local.
               </p>
               <span class="project__cta">Open project <span class="arrow">→</span></span>
             </div>
@@ -215,13 +209,13 @@
               </div>
             </div>
             <div class="project__body">
-              <span class="project__tag mono">Python · kRPC · control&nbsp;theory</span>
+              <span class="project__tag mono">Python · kRPC</span>
               <h3 class="project__title">Autonomous Landing &amp; Flight Control Agent for KSP</h3>
               <p class="project__desc">
                 A guidance agent that flies and lands rockets in Kerbal Space Program with no
                 human input. Live telemetry over kRPC feeds a closed-loop controller: suicide-burn
-                timing, throttle &amp; gimbal PID, and touchdown within metres of a target — the
-                kind of powered descent you'd otherwise watch SpaceX do.
+                timing, throttle and touchdown on target. <br>
+                Inspired by SpaceX.
               </p>
               <span class="project__cta">Open project <span class="arrow">→</span></span>
             </div>
@@ -230,6 +224,10 @@
 
       </ul>
     </main>
+
+    <footer class="footer">
+      <span>© 2026 Razreshitel</span>
+    </footer>
 
   </div>
 </body>
