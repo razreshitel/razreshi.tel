@@ -1,18 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Philippov A.">
   <defs>
     <linearGradient id="pa" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ff6a3d"/>
-      <stop offset="0.5" stop-color="#2ec4b6"/>
-      <stop offset="1" stop-color="#7b76ff"/>
+      <stop offset="0.2" stop-color="#2ec4b6"/>
+      <stop offset="1" stop-color="#fb060f"/>
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="14" fill="#141417"/>
   <!-- P: vertical stem -->
-  <rect x="15" y="14" width="8.5" height="37" rx="4.25" fill="url(#pa)"/>
+  <rect x="15.5" y="14" width="8.5" height="37" rx="4.25" fill="url(#pa)"/>
   <!-- P: larger bowl (ушко) -->
-  <rect x="15" y="14" width="26" height="23" rx="11.5" fill="url(#pa)"/>
+  <rect x="15.5" y="14" width="26" height="23" rx="11.5" fill="url(#pa)"/>
   <!-- bowl hole, punched in the tile colour -->
-  <rect x="24.5" y="20.5" width="11" height="10" rx="5" fill="#141417"/>
+  <rect x="24" y="20.5" width="11" height="10" rx="5" fill="#141417"/>
   <!-- trailing dot -->
-  <circle cx="47.5" cy="47" r="4" fill="url(#pa)"/>
+  <circle cx="46.5" cy="47" r="4" fill="url(#pa)"/>
 </svg>
