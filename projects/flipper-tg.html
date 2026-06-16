@@ -19,9 +19,13 @@
       <span class="proj-eyebrow"><span class="dot"></span> PROJECT · flipper-tg</span>
       <h1 class="proj-title">Telegram bot bridge for Flipper&nbsp;Zero</h1>
       <p class="proj-lede">
-        Browse and send Telegram messages straight from a Flipper Zero — a self-hosted
-        Pi server, an ESP32 Wi-Fi bridge, and a custom FAP app, turning a pentest gadget
-        into a real, private messenger.
+        Browse and send Telegram messages straight from a Flipper Zero's screen.
+        A self-hosted server on Pi + FastAPI backend talks to a custom FAP app over an
+        ESP32 Wi-Fi bridge — Cyrillic transliteration, paginated chats, on-device keyboard, secured communications.<br>
+        <br>
+        Every message that bot sees - getting saved on server's database. <br>
+        Connections between server and Flipper are encrypted with secret. 
+        Has Web UI to browse and delete messages from a browser.
       </p>
 
       <div class="proj-tags">
@@ -38,14 +42,14 @@
       </div>
     </section>
 
-    <div class="proj-soon">
+    <!-- <div class="proj-soon">
       <div class="soon-icon">✶</div>
       <div>
         <strong>Full write-up coming soon</strong>
         Architecture diagrams, the FAP UI on the 128×64 display, the Cyrillic
         transliteration trick, and the self-signed HTTPS setup will live here.
       </div>
-    </div>
+    </div> -->
   </div>
 
   <script src="../lightbox.js" defer></script>
