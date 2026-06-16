@@ -5,13 +5,9 @@
       <stop offset="1" stop-color="#fb060f"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="#141417"/>
-  <!-- P: vertical stem -->
-  <rect x="15.5" y="14" width="8.5" height="37" rx="4.25" fill="url(#pa)"/>
-  <!-- P: larger bowl (ушко) -->
-  <rect x="15.5" y="14" width="26" height="23" rx="11.5" fill="url(#pa)"/>
-  <!-- bowl hole, punched in the tile colour -->
-  <rect x="24" y="20.5" width="11" height="10" rx="5" fill="#141417"/>
-  <!-- trailing dot -->
-  <circle cx="46.5" cy="47" r="4" fill="url(#pa)"/>
+  <rect width="64" height="64" rx="6" fill="#141417"/>
+  <rect x="15.5" y="14" width="8.5" height="37" rx="1.5" fill="url(#pa)"/>
+  <rect x="15.5" y="14" width="26" height="23" rx="5" fill="url(#pa)"/>
+  <rect x="24" y="20.5" width="11" height="10" rx="2" fill="#141417"/>
+  <rect x="42.5" y="43" width="8" height="8" rx="1.5" fill="url(#pa)"/>
 </svg>
