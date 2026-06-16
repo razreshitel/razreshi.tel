@@ -157,7 +157,6 @@ a { color: inherit; text-decoration: none; }
   gap: .7rem;
 }
 .section-head h2::before {
-  content: "[01]";
   font-family: 'JetBrains Mono', monospace;
   font-size: .72rem;
   letter-spacing: .1em;
