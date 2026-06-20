@@ -789,3 +789,115 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
   .lightbox img { transform: none; }
 }
+
+/* ============ Showcase video (flight footage) ============ */
+.proj-figure { margin: 0; max-width: 1000px; }
+.proj-video {
+  position: relative;
+  border: 1px solid var(--border);
+  background: #000;
+  overflow: hidden;
+  transition: border-color .25s var(--ease);
+}
+.proj-video:hover { border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+.proj-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+/* HUD corner brackets (top only — clear of the player controls) */
+.proj-video::before,
+.proj-video::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 15px; height: 15px;
+  pointer-events: none;
+  z-index: 2;
+}
+.proj-video::before { left: 8px; border-top: 1.5px solid var(--accent); border-left: 1.5px solid var(--accent); }
+.proj-video::after { right: 8px; border-top: 1.5px solid var(--accent); border-right: 1.5px solid var(--accent); }
+.proj-figure figcaption {
+  margin-top: .95rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .67rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  display: flex;
+  gap: .65rem;
+  align-items: baseline;
+}
+.proj-figure figcaption .mk { color: var(--accent); flex: none; }
+
+/* ============ Sensor-only principle (no cheating) ============ */
+.principle {
+  position: relative;
+  padding: clamp(1.5rem, 3.6vw, 2.1rem);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border));
+  background: color-mix(in srgb, var(--accent) 4%, var(--surface));
+  max-width: 1000px;
+}
+.principle::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--accent);
+}
+.principle h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: clamp(1.05rem, 2vw, 1.26rem);
+  margin: 0 0 .7rem;
+}
+.principle > p {
+  margin: 0 0 1.6rem;
+  color: var(--text-dim);
+  font-size: .98rem;
+  max-width: 72ch;
+}
+.principle__cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.1rem, 3vw, 2.4rem);
+}
+.principle__col h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin: 0 0 .85rem;
+}
+.principle__col--use h4 { color: var(--accent); }
+.principle__col--deny h4 { color: var(--text-faint); }
+.principle__col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .55rem;
+}
+.principle__col li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: .9rem;
+  line-height: 1.4;
+  color: var(--text-dim);
+}
+.principle__col li::before {
+  position: absolute;
+  left: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+}
+.principle__col--use li::before { content: "+"; color: var(--accent); }
+.principle__col--deny li { color: var(--text-faint); }
+.principle__col--deny li::before { content: "\00d7"; color: var(--text-faint); }
+@media (max-width: 620px) {
+  .principle__cols { grid-template-columns: 1fr; }
+}
