@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
-  <title>Autonomous rockets in KSP — Philippov A.</title>
+  <title>Autonomous rockets in KSP</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Jost:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -20,11 +20,11 @@
       <h1 class="proj-title">Autonomous rockets in Kerbal Space Program</h1>
       <p class="proj-lede">
         Python autopilot scripts that fly rockets in Kerbal Space Program with no human
-        input, driven live over the kRPC mod — commands out, telemetry streams in, over TCP.
+        input, driven live over the kRPC mod - telemetry out, commands streams in, over TCP.
         Two scripts do the work: one launches a vessel to a permanent, stable orbit; the other
         flies a booster back to a soft upright landing near the pad while the upper stage reaches
-        orbit on the same flight. Proven in-game across roughly 25 autonomous flights —
-        a hobby and thesis project, not a product.
+        orbit on the same flight. Proven in-game across 25 autonomous flights.
+        A hobby project, not a product.
       </p>
 
       <div class="proj-tags">
@@ -52,9 +52,9 @@
             <p>
               <span class="mono">launch_to_orbit.py</span> flies the active vessel up on a
               gravity-turn ascent and circularizes at apoapsis into a stable orbit that will not
-              decay — 80 km by default. It handles single-stage or two-stage rockets: a two-stage
-              craft auto-stages, dropping the first stage on its own once its fuel hits a set
-              reserve and finishing the orbit on the next.
+              decay - 70-80 km. It handles single-stage or two-stage rockets: a two-stage
+              craft auto-stages, dropping the first stage on its own once its fuel hits zero 
+              and finishing the orbit on the next.
             </p>
             <p>
               Target altitude, gravity-turn end, the first-stage fuel reserve, and an optional
@@ -70,15 +70,14 @@
             <p>
               <span class="mono">launch_and_recover.py</span> runs a Falcon-9-style profile on a
               two-stage rocket: launch, then separate the first stage once it burns down to a set
-              fuel limit (30% by default). From there both stages fly at once in one control loop —
+              fuel limit (30% by default). From there both stages fly at once in one control loop -
               the booster turns around, burns back toward the pad, deploys airbrakes on the descent,
               and brakes to a soft upright touchdown, while the second stage carries on to orbit.
             </p>
             <p>
-              Best in-game run: the booster came down alive — 0.3° off vertical, stopped at
-              0.01 m/s, undamaged, −2.85 m/s at touchdown, ~130–540 m from the pad — with the upper
-              stage in a stable 70.5 × 84 km orbit on the same flight. It needs the Physics Range
-              Extender mod so both stages stay simulated once they drift apart.
+              Best in-game run: the booster came down alive - 0.3° off vertical, 
+              undamaged, −2.85 m/s at touchdown - with the upper
+              stage in a stable 70.5 × 84 km orbit on the same flight.
             </p>
           </div>
         </div>
@@ -97,15 +96,15 @@
           <video controls preload="metadata" playsinline width="1280" height="720"
                  poster="../assets/ksp-autopilot/recover-poster.jpg">
             <source src="../assets/ksp-autopilot/recover.mp4" type="video/mp4" />
-            Your browser doesn't support embedded video — the file is at
+            Your browser doesn't support embedded video - the file is at
             <code>assets/ksp-autopilot/recover.mp4</code>.
           </video>
         </div>
         <figcaption>
           <span class="mk">REC ·</span>
-          <span><span class="mono">launch_and_recover.py</span> end to end — launch, stage
-          separation, and the booster flying itself back to a powered vertical landing, with a
-          picture-in-picture inset of the second stage reaching orbit at the same moment.</span>
+          <span><span class="mono">launch_and_recover.py</span> end to end - launch, stage
+          separation, and the booster flying itself back to a powered vertical landing, with 
+          inset of the second stage reaching orbit at the same moment.</span>
         </figcaption>
       </figure>
     </section>
@@ -118,12 +117,11 @@
       </div>
 
       <div class="principle">
-        <h3>No cheating — sensor-only flight</h3>
+        <h3>No cheating - sensor-only flight</h3>
         <p>
           The autopilot reads only what a real flight computer could, then works the rest out
-          itself — orbital elements, time to apoapsis, the suicide-burn, and a drag-aware
-          prediction of where the booster will fall — the way real avionics would. Save/reload and
-          time-warp only reset between test flights; they never touch the control loop.
+          itself: orbital elements, time to apoapsis, the suicide-burn, and a drag-aware
+          prediction of where the booster will fall - the way real avionics would.
         </p>
         <div class="principle__cols">
           <div class="principle__col principle__col--use">
@@ -132,13 +130,13 @@
               <li>position &amp; velocity (GPS / INS)</li>
               <li>altitude &amp; radar altitude</li>
               <li>vertical speed &amp; speed</li>
-              <li>mass · thrust · remaining fuel</li>
+              <li>mass + thrust + remaining fuel</li>
               <li>attitude</li>
               <li>an onboard atmosphere / drag model</li>
             </ul>
           </div>
           <div class="principle__col principle__col--deny">
-            <h4>Never — the game's god view</h4>
+            <h4>Never - the game's god view</h4>
             <ul>
               <li>map-view apoapsis / periapsis</li>
               <li>the game's predicted impact point</li>
@@ -159,12 +157,12 @@
 
       <div class="spec">
         <div class="spec__row"><div class="spec__k">Interface</div><div class="spec__v"><b>kRPC</b> over TCP · RPC + telemetry streams</div></div>
-        <div class="spec__row"><div class="spec__k">Guidance</div><div class="spec__v"><b>vis-viva · Tsiolkovsky</b> · gravity-turn pitch program · suicide-burn solver</div></div>
-        <div class="spec__row"><div class="spec__k">Control</div><div class="spec__v"><b>PID loops</b> · slew-rate-limited attitude on reaction wheels (no gimbal)</div></div>
-        <div class="spec__row"><div class="spec__k">Sensing</div><div class="spec__v"><b>Onboard state only</b> · position, velocity, mass, thrust, fuel, attitude, radar altitude · in-house drag model</div></div>
-        <div class="spec__row"><div class="spec__k">Mods</div><div class="spec__v"><b>kRPC</b> · Physics Range Extender (keeps both stages simulated apart)</div></div>
+        <div class="spec__row"><div class="spec__k">Guidance</div><div class="spec__v"><b>vis-viva</b> gravity-turn pitch program, suicide-burn solver</div></div>
+        <div class="spec__row"><div class="spec__k">Control</div><div class="spec__v"><b>PID loops</b> slew-rate-limited attitude on reaction wheels (no gimbal)</div></div>
+        <div class="spec__row"><div class="spec__k">Sensing</div><div class="spec__v"><b>Onboard state only</b> position, velocity, mass, thrust, fuel, attitude, radar altitude · in-house drag model</div></div>
+        <div class="spec__row"><div class="spec__k">Mods</div><div class="spec__v"><b>kRPC</b> Physics Range Extender (keeps both stages simulated apart)</div></div>
         <div class="spec__row"><div class="spec__k">Tests</div><div class="spec__v"><b>~93 pytest</b> over the pure-math guidance · reusable</div></div>
-        <div class="spec__row"><div class="spec__k">Status</div><div class="spec__v"><b>Works in-game</b> · lands safe &amp; upright ~130–540 m off pad · next: pinpoint pad landing</div></div>
+        <div class="spec__row"><div class="spec__k">Status</div><div class="spec__v"><b>Works in-game</b> lands safe upright</div></div>
       </div>
     </section>
   </div>

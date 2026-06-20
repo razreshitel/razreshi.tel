@@ -896,8 +896,8 @@ a { color: inherit; text-decoration: none; }
   font-weight: 500;
 }
 .principle__col--use li::before { content: "+"; color: var(--accent); }
+.principle__col--deny li::before { content: "-"; color: var(--text-faint); }
 .principle__col--deny li { color: var(--text-faint); }
-.principle__col--deny li::before { content: "\00d7"; color: var(--text-faint); }
 @media (max-width: 620px) {
   .principle__cols { grid-template-columns: 1fr; }
 }
