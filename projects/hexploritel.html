@@ -16,19 +16,18 @@
     <a class="back" href="../"><span>←</span> Back to all work</a>
 
     <section class="proj-hero">
-      <span class="proj-eyebrow"><span class="dot"></span> PROJECT · hexploritel</span>
+      <span class="proj-eyebrow"><span class="dot"></span> PROJECT / hexploritel</span>
       <h1 class="proj-title">HexPlor'itel</h1>
       <p class="proj-lede">
-        An Android-map-app that makes it easier to keep track of paths you was on. Draw an
-        area of hexagons and it will clear as you physically move through it. 
-        Supports track recording, importing and exporting data. 
-        Also supports google-timeline jsons.
+        An Android map application that keeps a record of where you have actually walked.
+        Draw an area and it fills with hexagons that clear as you physically pass through them.
+        Supports track recording, GPX import and export, and Google Timeline import.
       </p>
 
       <div class="proj-tags">
         <span class="chip">Kotlin</span>
         <span class="chip">Jetpack Compose</span>
-        <span class="chip">MapLibre Native · PMTiles</span>
+        <span class="chip">MapLibre Native / PMTiles</span>
         <span class="chip">Uber H3</span>
         <span class="chip">Room</span>
         <span class="chip">offline-first</span>
@@ -51,8 +50,8 @@
             <h3>Uncover the map on foot</h3>
             <p>
               Draw an area anywhere on the map and it fills with grey hexagons. They clear wherever you
-              physically walk, so the map opens up only where you've actually been — and you can redraw or
-              delete an area later without losing the ground you've already covered.
+              physically walk, so the map opens up only where you have actually been. You can redraw or
+              delete an area later without losing the ground you have already covered.
             </p>
           </div>
         </div>
@@ -73,21 +72,22 @@
           <div>
             <h3>Offline maps</h3>
             <p>
-              Download any region as a single file and the map keeps working fully offline — handy where
-              tiles are slow or blocked. When you're online it streams fast map tiles instantly, then falls
-              back to your downloaded maps the moment you lose signal. The first 4 zoom levels of the world
+              Download any region as a single file and the map keeps working fully offline, which helps
+              where tiles are slow or blocked. When online it streams fast map tiles instantly, then falls
+              back to the downloaded maps the moment the signal drops. The first 4 zoom levels of the world
               map are built in.
             </p>
           </div>
         </div>
 
         <div class="feat">
-          <div class="feat__k"><span class="n">04</span> no spoof</div>
+          <div class="feat__k"><span class="n">04</span> Filter</div>
           <div>
-            <h3>Anti GPS spoofing</h3>
+            <h3>GPS spoof filtering</h3>
             <p>
-              Provides huge filtering selection for heavy GPS spoofing places. <br>
-              Fake, mock and impossible-teleports are rejected automatically, so your distance, route and coverage stay honest.
+              A configurable filter chain rejects fake, mocked, and physically impossible position
+              fixes, so distance, routes, and coverage stay accurate even in areas with heavy
+              GPS spoofing.
             </p>
           </div>
         </div>
@@ -97,9 +97,10 @@
           <div>
             <h3>Import, export, back up</h3>
             <p>
-              Bring in tracks from other apps or export data elsewhere as .GPX, and
-              save everything — tracks, areas, coverage and settings — to a single backup file. <br>
-              For import supports .GPS and .json from google-timelines. After importing you can filter short tracks.
+              Import tracks from other apps or export them as GPX, and save everything (tracks,
+              areas, coverage, settings) to a single backup file. <br>
+              Import accepts GPX and Google Timeline JSON, and short tracks can be filtered
+              out after import.
             </p>
           </div>
         </div>
@@ -107,11 +108,11 @@
         <div class="feat">
           <div class="feat__k"><span class="n">06</span> Tune</div>
           <div>
-            <h3>Themes</h3>
+            <h3>Themes and settings</h3>
             <p>
-              Switch between light and dark, pick the hexagon colour, adjust how much each step clears and
-              how strictly fixes are filtered, and choose your online and offline map sources — a preset or
-              your own tile URL.
+              Switch between light and dark themes, pick the hexagon colour, adjust how much each step
+              clears and how strictly fixes are filtered, and choose the online and offline map sources:
+              a preset or your own tile URL.
             </p>
           </div>
         </div>
@@ -122,7 +123,7 @@
     <section class="proj-section">
       <div class="proj-section__head">
         <h2>Screenshots</h2>
-        <span>07 captures · on device</span>
+        <span>07 captures, on device</span>
       </div>
 
       <ul class="shots">
@@ -175,19 +176,19 @@
     <section class="proj-section">
       <div class="proj-section__head">
         <h2>Datasheet</h2>
-        <span>v0.3 · beta</span>
+        <span>v0.3 beta</span>
       </div>
 
       <div class="spec">
-        <div class="spec__row"><div class="spec__k">Platform</div><div class="spec__v"><b>Android</b> · minSdk 31 · arm64-v8a</div></div>
-        <div class="spec__row"><div class="spec__k">Stack</div><div class="spec__v"><b>Kotlin · Jetpack Compose · Material 3</b></div></div>
-        <div class="spec__row"><div class="spec__k">Maps</div><div class="spec__v"><b>MapLibre Native</b> · PMTiles · Protomaps OSM basemap</div></div>
-        <div class="spec__row"><div class="spec__k">Coverage</div><div class="spec__v"><b>Uber H3</b> · res-11 visited cells, zoom-driven display res</div></div>
-        <div class="spec__row"><div class="spec__k">Storage</div><div class="spec__v"><b>Room</b> · local-only, excluded from cloud / adb backup</div></div>
-        <div class="spec__row"><div class="spec__k">Interchange</div><div class="spec__v"><b>GPX 1.1</b> import / export · full zip backup &amp; restore</div></div>
-        <div class="spec__row"><div class="spec__k">Status</div><div class="spec__v"><b>Beta</b> · on-device daily driver</div></div>
+        <div class="spec__row"><div class="spec__k">Platform</div><div class="spec__v"><b>Android</b> minSdk 31, arm64-v8a</div></div>
+        <div class="spec__row"><div class="spec__k">Stack</div><div class="spec__v"><b>Kotlin, Jetpack Compose, Material 3</b></div></div>
+        <div class="spec__row"><div class="spec__k">Maps</div><div class="spec__v"><b>MapLibre Native</b> PMTiles, Protomaps OSM basemap</div></div>
+        <div class="spec__row"><div class="spec__k">Coverage</div><div class="spec__v"><b>Uber H3</b> res-11 visited cells, zoom-driven display resolution</div></div>
+        <div class="spec__row"><div class="spec__k">Storage</div><div class="spec__v"><b>Room</b> local-only, excluded from cloud and adb backup</div></div>
+        <div class="spec__row"><div class="spec__k">Interchange</div><div class="spec__v"><b>GPX 1.1</b> import and export, full zip backup and restore</div></div>
+        <div class="spec__row"><div class="spec__k">Status</div><div class="spec__v"><b>Beta</b> daily driver on my own device</div></div>
       </div>
-      <p class="proj-credit">Map data © OpenStreetMap contributors · basemap by Protomaps</p>
+      <p class="proj-credit">Map data © OpenStreetMap contributors, basemap by Protomaps</p>
     </section>
   </div>
 

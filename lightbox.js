@@ -1,7 +1,7 @@
 /* Click a screenshot (.shots img) to zoom; click outside / ✕ / Esc to close.
    No-op on pages without a .shots gallery. Load with `defer`. */
 (function () {
-  // Desktop only — skip click-to-zoom on phones / narrow viewports.
+  // Desktop only - skip click-to-zoom on phones / narrow viewports.
   if (!window.matchMedia('(min-width: 768px)').matches) return;
 
   var shots = document.querySelectorAll('.shots img');

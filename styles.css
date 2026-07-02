@@ -1,5 +1,5 @@
 /* ============================================================
-   SpaceX-merged technical system — sharp edges, DIN caps,
+   SpaceX-merged technical system - sharp edges, DIN caps,
    hairline dividers, muted per-project accents.
    ============================================================ */
 :root {
@@ -170,7 +170,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--text-faint);
 }
 
-/* ============ Projects — VARIATION A (sharp cards) ============ */
+/* ============ Projects - VARIATION A (sharp cards) ============ */
 .projects {
   list-style: none;
   margin: 0;
@@ -226,7 +226,7 @@ a { color: inherit; text-decoration: none; }
 }
 .project:hover::after, .project:focus-visible::after { transform: scaleX(1); }
 
-/* visual — schematic frame */
+/* visual - schematic frame */
 .project__visual {
   position: relative;
   aspect-ratio: 16 / 11;
@@ -275,7 +275,7 @@ a { color: inherit; text-decoration: none; }
 .vmeta--tr { top: 11px; right: 12px; }
 .vmeta--bl { bottom: 11px; left: 12px; }
 
-/* svg theming — crisp schematic strokes */
+/* svg theming - crisp schematic strokes */
 .vline  { fill: none; stroke: var(--text-dim); stroke-width: 3.4; transition: stroke .3s var(--ease); }
 .vdash  { fill: none; stroke: var(--text-dim); stroke-width: 3.4; stroke-dasharray: 5 7; stroke-linecap: round; transition: stroke .3s var(--ease); }
 .vfill  { fill: var(--accent); opacity: .82; }
@@ -325,7 +325,7 @@ a { color: inherit; text-decoration: none; }
 .project__cta .arrow { transition: transform .3s var(--ease); }
 .project:hover .project__cta .arrow { transform: translateX(6px); }
 
-/* ============ Projects — VARIATION B (manifest list) ============ */
+/* ============ Projects - VARIATION B (manifest list) ============ */
 .manifest { border-top: 1px solid var(--border-2); }
 .mhead,
 .mrow {
@@ -735,7 +735,7 @@ a { color: inherit; text-decoration: none; }
   .spec__row { grid-template-columns: 1fr; gap: .25rem; }
 }
 
-/* ============ Lightbox (click a screenshot to zoom — desktop only) ============ */
+/* ============ Lightbox (click a screenshot to zoom, desktop only) ============ */
 @media (min-width: 768px) {
   .shots .shot__media { cursor: zoom-in; }
 }
@@ -807,7 +807,7 @@ a { color: inherit; text-decoration: none; }
   aspect-ratio: 16 / 9;
   background: #000;
 }
-/* HUD corner brackets (top only — clear of the player controls) */
+/* HUD corner brackets (top only, clear of the player controls) */
 .proj-video::before,
 .proj-video::after {
   content: "";
@@ -832,7 +832,7 @@ a { color: inherit; text-decoration: none; }
 }
 .proj-figure figcaption .mk { color: var(--accent); flex: none; }
 
-/* ============ Sensor-only principle (no cheating) ============ */
+/* ============ Sensor-only principle ============ */
 .principle {
   position: relative;
   padding: clamp(1.5rem, 3.6vw, 2.1rem);
