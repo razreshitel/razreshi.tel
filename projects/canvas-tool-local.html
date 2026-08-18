@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <title>Canvas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Jost:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body style="--accent:#b985f4;">
+  <div class="page">
+    <a class="back" href="../"><span>←</span> Back to all work</a>
+
+    <section class="proj-hero">
+      <span class="proj-eyebrow"><span class="dot"></span> PROJECT / canvas-tool-local</span>
+      <h1 class="proj-title">Canvas</h1>
+      <p class="proj-lede">
+        A self-hosted visual workspace for notes, tasks, files, diagrams, tables,
+        charts, and nested boards. It runs directly on Node.js and keeps account,
+        workspace, sharing, and upload data on your own server.
+      </p>
+
+      <div class="proj-tags">
+        <span class="chip">Next.js</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">React</span>
+        <span class="chip">SQLite</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">self-hosted</span>
+      </div>
+
+      <div class="proj-actions">
+        <a class="btn btn--primary" href="https://github.com/razreshitel/canvas-tool-local" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="proj-section">
+      <div class="proj-section__head">
+        <h2>What it does</h2>
+        <span>05 systems</span>
+      </div>
+
+      <div class="writeup">
+        <div class="feat">
+          <div class="feat__k"><span class="n">01</span> Workspace</div>
+          <div>
+            <h3>Arrange ideas on an infinite canvas</h3>
+            <p>
+              The workspace supports zooming, panning, multi-selection, snapping, undo,
+              and redo. Boards can be nested with their own icons, breadcrumbs, browser
+              history, and an Unsorted inbox for new material.
+            </p>
+          </div>
+        </div>
+
+        <div class="feat">
+          <div class="feat__k"><span class="n">02</span> Objects</div>
+          <div>
+            <h3>Mix structured and visual content</h3>
+            <p>
+              Notes, to-do lists, documents, links, files, media, maps, sketches, tables,
+              charts, arrows, comments, columns, and folder shelves all live on the same board.
+              Rich previews cover text, source code, books, PDFs, Office files, images, video,
+              and audio.
+            </p>
+          </div>
+        </div>
+
+        <div class="feat">
+          <div class="feat__k"><span class="n">03</span> Find</div>
+          <div>
+            <h3>Keep a large workspace navigable</h3>
+            <p>
+              Indexed search, a command palette, Trash, resumable uploads, and bounded revision
+              history make the workspace recoverable and quick to navigate. Boards can be exported
+              to PNG, PDF, Markdown, text, JSON, or ZIP.
+            </p>
+          </div>
+        </div>
+
+        <div class="feat">
+          <div class="feat__k"><span class="n">04</span> Share</div>
+          <div>
+            <h3>Share only the board that matters</h3>
+            <p>
+              Accounts stay private by default, with per-board access for other users.
+              Workspace changes update live across browser tabs and between authorized users
+              without exposing the rest of the account.
+            </p>
+          </div>
+        </div>
+
+        <div class="feat">
+          <div class="feat__k"><span class="n">05</span> Operate</div>
+          <div>
+            <h3>Run it as a small self-hosted service</h3>
+            <p>
+              Canvas runs as a native systemd service behind Caddy HTTPS. Atomic releases,
+              health checks, rollback, storage maintenance, and verified daily backups keep
+              the Raspberry Pi deployment practical to operate.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ownership -->
+    <section class="proj-section">
+      <div class="proj-section__head">
+        <h2>The constraint</h2>
+        <span>owned infrastructure</span>
+      </div>
+
+      <div class="principle">
+        <h3>The server owns the workspace data</h3>
+        <p>
+          Application state, accounts, uploads, sharing rules, and backups are managed by the
+          Canvas host. The browser receives the workspace UI, while sensitive storage and internal
+          service endpoints remain behind authenticated routes and the HTTPS reverse proxy.
+        </p>
+        <div class="principle__cols">
+          <div class="principle__col principle__col--use">
+            <h4>Kept on the host</h4>
+            <ul>
+              <li>SQLite workspace and account data</li>
+              <li>uploaded files and per-account quotas</li>
+              <li>sharing rules and session state</li>
+              <li>backups, releases, and diagnostics</li>
+            </ul>
+          </div>
+          <div class="principle__col principle__col--deny">
+            <h4>Not exposed directly</h4>
+            <ul>
+              <li>SQLite database files</li>
+              <li>the raw upload directory</li>
+              <li>the localhost application port</li>
+              <li>sensor API credentials</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Datasheet -->
+    <section class="proj-section">
+      <div class="proj-section__head">
+        <h2>Datasheet</h2>
+        <span>self-hosted workspace</span>
+      </div>
+
+      <div class="spec">
+        <div class="spec__row"><div class="spec__k">Frontend</div><div class="spec__v"><b>Next.js 16, React 19, TypeScript</b></div></div>
+        <div class="spec__row"><div class="spec__k">Runtime</div><div class="spec__v"><b>Node.js 22</b>, standalone systemd service</div></div>
+        <div class="spec__row"><div class="spec__k">Storage</div><div class="spec__v"><b>SQLite and local uploads</b>, per-account quotas and file reconciliation</div></div>
+        <div class="spec__row"><div class="spec__k">Access</div><div class="spec__v"><b>Private accounts and per-board sharing</b>, live cross-session updates</div></div>
+        <div class="spec__row"><div class="spec__k">Files</div><div class="spec__v"><b>Resumable uploads and rich previews</b>, authenticated download routes</div></div>
+        <div class="spec__row"><div class="spec__k">Operations</div><div class="spec__v"><b>Caddy HTTPS, health checks, atomic releases, rollback</b></div></div>
+        <div class="spec__row"><div class="spec__k">Backups</div><div class="spec__v"><b>Daily verified archives</b>, SQLite integrity, foreign key, checksum, and upload checks</div></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="../lightbox.js" defer></script>
+</body>
+</html>

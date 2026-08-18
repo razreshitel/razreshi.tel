@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <title>Povtoritel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Jost:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body style="--accent:#e96b5d;">
+  <div class="page">
+    <a class="back" href="../"><span>←</span> Back to all work</a>
+
+    <section class="proj-hero">
+      <span class="proj-eyebrow"><span class="dot"></span> PROJECT / povtoritel</span>
+      <h1 class="proj-title">Povtoritel</h1>
+      <p class="proj-lede">
+        A Windows application for instant replay and continuous screen recording.
+        It keeps the selected time window in RAM, saves it to MP4 on demand, and runs
+        quietly from the system tray. Capture, encoding, audio, and file output stay on
+        the local machine.
+      </p>
+
+      <div class="proj-tags">
+        <span class="chip">Python</span>
+        <span class="chip">Windows</span>
+        <span class="chip">FFmpeg</span>
+        <span class="chip">Desktop Duplication</span>
+        <span class="chip">hardware encoding</span>
+        <span class="chip">local-only</span>
+      </div>
+
+      <div class="proj-actions">
+        <a class="btn btn--primary" href="https://github.com/razreshitel/povtoritel" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="proj-section">
+      <div class="proj-section__head">
+        <h2>What it does</h2>
+        <span>04 features</span>
+      </div>
+
+      <div class="writeup">
+        <div class="feat">
+          <div class="feat__k"><span class="n">01</span> Replay</div>
+          <div>
+            <h3>Save the last few minutes</h3>
+            <p>
+              Povtoritel continuously keeps a configurable one to ten minute window in RAM.
+              A global hotkey writes the current buffer to MP4, so the moment can be saved
+              after it has already happened without recording the entire session to disk.
+            </p>
+          </div>
+        </div>
+
+        <div class="feat">
+          <div class="feat__k"><span class="n">02</span> Record</div>
+          <div>
+            <h3>Switch to continuous capture</h3>
+            <p>
+              A second hotkey starts and stops a normal long recording. It can also be
+              activated by holding the replay hotkey for two seconds, which keeps both
+              capture modes available without opening the tray menu.
+            </p>
+          </div>
+        </div>
+
+        <div class="feat">
+          <div class="feat__k"><span class="n">03</span> Audio</div>
+          <div>
+            <h3>Keep useful audio tracks</h3>
+            <p>
+              Desktop audio and microphone input are configurable. Automatic per-application
+              tracks separate active programs by executable name, while silent tracks are
+              removed from the saved file.
+            </p>
+          </div>
+        </div>
+
+        <div class="feat">
+          <div class="feat__k"><span class="n">04</span> Control</div>
+          <div>
+            <h3>Stay out of the way</h3>
+            <p>
+              The tray icon shows whether buffering is active, paused, or recording.
+              Settings apply without restarting the application, on-screen notifications
+              appear on the selected display, and those notifications are excluded from capture.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="proj-section">
+      <div class="proj-section__head">
+        <h2>The constraint</h2>
+        <span>local capture</span>
+      </div>
+
+      <div class="principle">
+        <h3>The recording never needs a cloud service</h3>
+        <p>
+          The application is a direct Windows capture pipeline. Recent footage lives in memory,
+          hardware encoding happens on the GPU, and requested recordings are written to a folder
+          selected by the user.
+        </p>
+        <div class="principle__cols">
+          <div class="principle__col principle__col--use">
+            <h4>Runs on the PC</h4>
+            <ul>
+              <li>screen capture and H.264 encoding</li>
+              <li>RAM replay buffer</li>
+              <li>desktop, microphone, and app audio</li>
+              <li>tray controls and global hotkeys</li>
+            </ul>
+          </div>
+          <div class="principle__col principle__col--deny">
+            <h4>Not required</h4>
+            <ul>
+              <li>cloud recording account</li>
+              <li>remote upload service</li>
+              <li>browser extension</li>
+              <li>game-specific integration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Datasheet -->
+    <section class="proj-section">
+      <div class="proj-section__head">
+        <h2>Datasheet</h2>
+        <span>Windows desktop</span>
+      </div>
+
+      <div class="spec">
+        <div class="spec__row"><div class="spec__k">Platform</div><div class="spec__v"><b>Windows 10 or 11</b>, Python 3.12 or newer</div></div>
+        <div class="spec__row"><div class="spec__k">Capture</div><div class="spec__v"><b>FFmpeg Desktop Duplication</b>, one selected display</div></div>
+        <div class="spec__row"><div class="spec__k">Encoding</div><div class="spec__v"><b>NVIDIA NVENC or AMD AMF</b>, H.264 hardware encoding</div></div>
+        <div class="spec__row"><div class="spec__k">Replay</div><div class="spec__v"><b>1 to 10 minutes in RAM</b>, MP4 output on demand</div></div>
+        <div class="spec__row"><div class="spec__k">Frame rate</div><div class="spec__v"><b>30, 60, 120, or 144 FPS</b></div></div>
+        <div class="spec__row"><div class="spec__k">Audio</div><div class="spec__v"><b>Desktop mix, microphone, and per-application tracks</b></div></div>
+        <div class="spec__row"><div class="spec__k">Operation</div><div class="spec__v"><b>System tray, global hotkeys, autostart</b>, automatic recovery after display sleep</div></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="../lightbox.js" defer></script>
+</body>
+</html>
