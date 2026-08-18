@@ -20,9 +20,8 @@
       <h1 class="proj-title">Povtoritel</h1>
       <p class="proj-lede">
         A Windows application for instant replay and continuous screen recording.
-        It keeps the selected time window in RAM, saves it to MP4 on demand, and runs
-        quietly from the system tray. Capture, encoding, audio, and file output stay on
-        the local machine.
+        It keeps recent footage in RAM, saves it to MP4 on demand, and runs locally
+        from the system tray.
       </p>
 
       <div class="proj-tags">
@@ -43,91 +42,30 @@
     <section class="proj-section">
       <div class="proj-section__head">
         <h2>What it does</h2>
-        <span>04 features</span>
-      </div>
-
-      <div class="writeup">
-        <div class="feat">
-          <div class="feat__k"><span class="n">01</span> Replay</div>
-          <div>
-            <h3>Save the last few minutes</h3>
-            <p>
-              Povtoritel continuously keeps a configurable one to ten minute window in RAM.
-              A global hotkey writes the current buffer to MP4, so the moment can be saved
-              after it has already happened without recording the entire session to disk.
-            </p>
-          </div>
-        </div>
-
-        <div class="feat">
-          <div class="feat__k"><span class="n">02</span> Record</div>
-          <div>
-            <h3>Switch to continuous capture</h3>
-            <p>
-              A second hotkey starts and stops a normal long recording. It can also be
-              activated by holding the replay hotkey for two seconds, which keeps both
-              capture modes available without opening the tray menu.
-            </p>
-          </div>
-        </div>
-
-        <div class="feat">
-          <div class="feat__k"><span class="n">03</span> Audio</div>
-          <div>
-            <h3>Keep useful audio tracks</h3>
-            <p>
-              Desktop audio and microphone input are configurable. Automatic per-application
-              tracks separate active programs by executable name, while silent tracks are
-              removed from the saved file.
-            </p>
-          </div>
-        </div>
-
-        <div class="feat">
-          <div class="feat__k"><span class="n">04</span> Control</div>
-          <div>
-            <h3>Stay out of the way</h3>
-            <p>
-              The tray icon shows whether buffering is active, paused, or recording.
-              Settings apply without restarting the application, on-screen notifications
-              appear on the selected display, and those notifications are excluded from capture.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Privacy -->
-    <section class="proj-section">
-      <div class="proj-section__head">
-        <h2>The constraint</h2>
         <span>local capture</span>
       </div>
 
       <div class="principle">
-        <h3>The recording never needs a cloud service</h3>
+        <h3>Replay and recording from one capture pipeline</h3>
         <p>
-          The application is a direct Windows capture pipeline. Recent footage lives in memory,
-          hardware encoding happens on the GPU, and requested recordings are written to a folder
-          selected by the user.
+          Povtoritel keeps the last one to ten minutes in RAM and saves the buffer to MP4
+          with a global hotkey. The same pipeline can record continuously when needed.
         </p>
         <div class="principle__cols">
           <div class="principle__col principle__col--use">
-            <h4>Runs on the PC</h4>
+            <h4>Instant replay</h4>
             <ul>
-              <li>screen capture and H.264 encoding</li>
-              <li>RAM replay buffer</li>
-              <li>desktop, microphone, and app audio</li>
-              <li>tray controls and global hotkeys</li>
+              <li>one to ten minute RAM buffer</li>
+              <li>save after the moment has happened</li>
+              <li>NVIDIA or AMD hardware encoding</li>
             </ul>
           </div>
-          <div class="principle__col principle__col--deny">
-            <h4>Not required</h4>
+          <div class="principle__col principle__col--use">
+            <h4>Continuous recording</h4>
             <ul>
-              <li>cloud recording account</li>
-              <li>remote upload service</li>
-              <li>browser extension</li>
-              <li>game-specific integration</li>
+              <li>start and stop with a global hotkey</li>
+              <li>desktop, microphone, and per-app audio</li>
+              <li>local MP4 output from the system tray</li>
             </ul>
           </div>
         </div>

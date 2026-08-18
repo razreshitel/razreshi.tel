@@ -20,8 +20,8 @@
       <h1 class="proj-title">Canvas</h1>
       <p class="proj-lede">
         A self-hosted visual workspace for notes, tasks, files, diagrams, tables,
-        charts, and nested boards. It runs directly on Node.js and keeps account,
-        workspace, sharing, and upload data on your own server.
+        charts, and nested boards. Accounts, workspace data, sharing, and uploads
+        stay on your own server.
       </p>
 
       <div class="proj-tags">
@@ -42,104 +42,30 @@
     <section class="proj-section">
       <div class="proj-section__head">
         <h2>What it does</h2>
-        <span>05 systems</span>
-      </div>
-
-      <div class="writeup">
-        <div class="feat">
-          <div class="feat__k"><span class="n">01</span> Workspace</div>
-          <div>
-            <h3>Arrange ideas on an infinite canvas</h3>
-            <p>
-              The workspace supports zooming, panning, multi-selection, snapping, undo,
-              and redo. Boards can be nested with their own icons, breadcrumbs, browser
-              history, and an Unsorted inbox for new material.
-            </p>
-          </div>
-        </div>
-
-        <div class="feat">
-          <div class="feat__k"><span class="n">02</span> Objects</div>
-          <div>
-            <h3>Mix structured and visual content</h3>
-            <p>
-              Notes, to-do lists, documents, links, files, media, maps, sketches, tables,
-              charts, arrows, comments, columns, and folder shelves all live on the same board.
-              Rich previews cover text, source code, books, PDFs, Office files, images, video,
-              and audio.
-            </p>
-          </div>
-        </div>
-
-        <div class="feat">
-          <div class="feat__k"><span class="n">03</span> Find</div>
-          <div>
-            <h3>Keep a large workspace navigable</h3>
-            <p>
-              Indexed search, a command palette, Trash, resumable uploads, and bounded revision
-              history make the workspace recoverable and quick to navigate. Boards can be exported
-              to PNG, PDF, Markdown, text, JSON, or ZIP.
-            </p>
-          </div>
-        </div>
-
-        <div class="feat">
-          <div class="feat__k"><span class="n">04</span> Share</div>
-          <div>
-            <h3>Share only the board that matters</h3>
-            <p>
-              Accounts stay private by default, with per-board access for other users.
-              Workspace changes update live across browser tabs and between authorized users
-              without exposing the rest of the account.
-            </p>
-          </div>
-        </div>
-
-        <div class="feat">
-          <div class="feat__k"><span class="n">05</span> Operate</div>
-          <div>
-            <h3>Run it as a small self-hosted service</h3>
-            <p>
-              Canvas runs as a native systemd service behind Caddy HTTPS. Atomic releases,
-              health checks, rollback, storage maintenance, and verified daily backups keep
-              the Raspberry Pi deployment practical to operate.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ownership -->
-    <section class="proj-section">
-      <div class="proj-section__head">
-        <h2>The constraint</h2>
-        <span>owned infrastructure</span>
+        <span>self-hosted workspace</span>
       </div>
 
       <div class="principle">
-        <h3>The server owns the workspace data</h3>
+        <h3>A visual workspace on your own server</h3>
         <p>
-          Application state, accounts, uploads, sharing rules, and backups are managed by the
-          Canvas host. The browser receives the workspace UI, while sensitive storage and internal
-          service endpoints remain behind authenticated routes and the HTTPS reverse proxy.
+          Canvas combines an infinite board with structured cards, nested workspaces,
+          search, history, and private sharing.
         </p>
         <div class="principle__cols">
           <div class="principle__col principle__col--use">
-            <h4>Kept on the host</h4>
+            <h4>Workspace</h4>
             <ul>
-              <li>SQLite workspace and account data</li>
-              <li>uploaded files and per-account quotas</li>
-              <li>sharing rules and session state</li>
-              <li>backups, releases, and diagnostics</li>
+              <li>notes, tasks, files, tables, charts, and diagrams</li>
+              <li>nested boards, indexed search, and revision restore</li>
+              <li>per-board sharing with live updates</li>
             </ul>
           </div>
-          <div class="principle__col principle__col--deny">
-            <h4>Not exposed directly</h4>
+          <div class="principle__col principle__col--use">
+            <h4>Host</h4>
             <ul>
-              <li>SQLite database files</li>
-              <li>the raw upload directory</li>
-              <li>the localhost application port</li>
-              <li>sensor API credentials</li>
+              <li>Node.js service with SQLite and local uploads</li>
+              <li>Caddy HTTPS and authenticated file access</li>
+              <li>atomic updates, rollback, and verified backups</li>
             </ul>
           </div>
         </div>
