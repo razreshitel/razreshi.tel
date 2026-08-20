@@ -30,10 +30,16 @@
       <span class="proj-eyebrow"><span class="dot"></span> ПРОЕКТ / flipper-tg</span>
       <h1 class="proj-title">Мост Telegram для Flipper&nbsp;Zero</h1>
       <p class="proj-lede">
-        Чтение и отправка сообщений Telegram прямо с экрана Flipper Zero. Сервер FastAPI на Raspberry Pi связывается с приложением FAP через Wi-Fi-мост на ESP32, поддерживает транслитерацию кириллицы, постраничные чаты и экранную клавиатуру.<br>
+        Чтение и отправка сообщений Telegram прямо с экрана Flipper Zero. Сервер с FastAPI на Raspberry Pi связывается с приложением FAP через Wi-Fi-мост на ESP32.
         <br>
-        Все сообщения, доступные боту, сохраняются в базе данных сервера. <br>
+        Приложение на Flipper поддерживает экранную клавиатуру, транслитерацию кириллицы, постраничные чаты и имеет полное end-to-end шифрование сообщений.
+        <br>
+        <br>
+        Все сообщения, доступные боту, сохраняются в базе данных сервера. 
+        <br>
         Трафик между сервером и Flipper шифруется общим секретом. Веб-интерфейс позволяет просматривать и удалять сохраненные сообщения.
+        <br>
+        Если доступ к Telegram обычно заблокирован, VPN будет нужен только на сервере.
       </p>
 
       <div class="proj-tags">
@@ -42,7 +48,6 @@
         <span class="chip">SQLite</span>
         <span class="chip">ESP32</span>
         <span class="chip">Raspberry Pi</span>
-        <span class="chip">свой сервер</span>
       </div>
 
       <div class="proj-actions">

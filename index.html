@@ -72,13 +72,13 @@
 
       <div class="hero__bio">
         <p>
-          I build <strong>self-hosted, privacy-first tools</strong>: AI workspaces, browser tooling, firmware bridges,
+          I build <strong>local tools with a focus on security</strong>: workspaces, browser tooling, device bridges,
           and autonomous control systems.<br>
-          A selection of my projects is below.
+          Below is a selection of my projects.
         </p>
         <p class="hero__bio-dim">
-          Mostly <span class="mono">Python</span> or <span class="mono">C</span>, built on open-source tools.
-          I favor software that runs on my own machines and does not depend on outside infrastructure.
+          I mostly use Python and often extend open-source tools. I favor software built first around
+          my own needs and capable of running entirely locally.
         </p>
       </div>
     </header>
@@ -119,10 +119,9 @@
               <span class="project__tag mono">C / Python / Raspberry Pi</span>
               <h3 class="project__title">Telegram bot bridge for Flipper Zero</h3>
               <p class="project__desc">
-                Read and send Telegram messages from a Flipper Zero's screen.
-                A self-hosted FastAPI server on a Raspberry Pi talks to a custom FAP application over an
-                ESP32 Wi-Fi bridge, with Cyrillic transliteration, paginated chats, an on-device keyboard,
-                and encrypted transport.
+                Read and send Telegram messages from a Flipper Zero's screen. A FastAPI server on a Raspberry Pi
+                communicates with the device application over Wi-Fi, with Cyrillic transliteration, an on-device
+                keyboard, paginated chats, and end-to-end encryption.
               </p>
               <span class="project__cta">Open project <span class="arrow">→</span></span>
             </div>
@@ -155,9 +154,9 @@
               <span class="project__tag mono">Kotlin / Compose / MapLibre / Uber H3</span>
               <h3 class="project__title">HexPlor'itel</h3>
               <p class="project__desc">
-                An Android map application that keeps a record of where you have actually walked.
-                Draw an area and it fills with hexagons that clear as you physically pass through them.
-                Supports track recording, GPX import and export, and Google Timeline import.
+                An Android map that records where you have been. A selected area fills with hexagons that disappear
+                as you move, adding a <strong>progressive exploration</strong> layer. Key features include
+                <strong>GPS spoofing resistance, Google Timeline import, and offline maps from arbitrary sources</strong>.
               </p>
               <span class="project__cta">Open project <span class="arrow">→</span></span>
             </div>
@@ -189,8 +188,8 @@
               <span class="project__tag mono">JavaScript / yt-dlp / ffmpeg</span>
               <h3 class="project__title">VideoGrab'itel</h3>
               <p class="project__desc">
-                A Chrome extension that detects and downloads video from the current page: YouTube,
-                HLS and MPEG-DASH streams, or direct files. Processing is fully local and nothing is uploaded.
+                A Chrome extension for downloading video from the current page. It supports 99% of video types
+                encountered in practice. Processing stays local, with no uploads to external services.
               </p>
               <span class="project__cta">Open project <span class="arrow">→</span></span>
             </div>
@@ -222,9 +221,8 @@
               <span class="project__tag mono">Python / Windows / FFmpeg</span>
               <h3 class="project__title">Povtoritel</h3>
               <p class="project__desc">
-                A Windows instant replay and continuous recorder that keeps recent footage in RAM
-                and saves it on a global hotkey. Screen capture, hardware encoding, and audio
-                processing stay on the local machine.
+                An application for instant replay or continuous recording. Recent footage stays in RAM and is saved
+                with a global hotkey. Key features include <strong>separate audio tracks, a focused feature set and flexible configuration</strong>.
               </p>
               <span class="project__cta">Open project <span class="arrow">→</span></span>
             </div>
@@ -256,9 +254,8 @@
               <span class="project__tag mono">Next.js / TypeScript / SQLite / Raspberry Pi</span>
               <h3 class="project__title">Canvas</h3>
               <p class="project__desc">
-                A self-hosted visual workspace for notes, tasks, files, diagrams, tables, and nested boards.
-                It runs on Node.js with SQLite and keeps accounts, sharing, uploads, and backups
-                on your own server.
+                An interactive board for notes, images, files, drawings, tables, and nested boards. Accounts,
+                sharing, uploads, and backups run entirely locally on a personal server.
               </p>
               <span class="project__cta">Open project <span class="arrow">→</span></span>
             </div>
@@ -287,12 +284,11 @@
             </div>
             <div class="project__body">
               <span class="project__tag mono">Python / kRPC</span>
-              <h3 class="project__title">Autonomous rockets in KSP</h3>
+              <h3 class="project__title">Automated rocket landing in KSP</h3>
               <p class="project__desc">
-                Python scripts that fly rockets in Kerbal Space Program without human input:
-                one launches a vessel to a permanent orbit, the other returns the booster to a soft
-                upright landing while the upper stage continues to orbit. <br>
-                Guidance runs on onboard telemetry only, never on the game's map view.
+                Python scripts that control a rocket in Kerbal Space Program without human input: one sends the
+                vehicle into a stable orbit, while the other also returns the booster to a soft upright landing
+                as the upper stage continues to orbit.
               </p>
               <span class="project__cta">Open project <span class="arrow">→</span></span>
             </div>
@@ -302,7 +298,7 @@
       </ul>
 
       <div class="section-head" id="certifications">
-        <h2>Certifications</h2>
+        <h2>Acknowledgements</h2>
         <span class="section-head__meta">01 recognition</span>
       </div>
 
@@ -317,12 +313,11 @@
           </figure>
           <div class="cert__body">
             <span class="cert__eyebrow">NASA / Vulnerability Disclosure Program</span>
-            <h3 class="cert__title">Letter of recognition and Hall of Fame</h3>
+            <h3 class="cert__title">Letter of recognition from <strong>NASA</strong></h3>
             <p class="cert__text">
-              In June 2026 I reported multiple <b>P1</b> (their highest severity rating)
-              vulnerabilities to NASA through their Vulnerability Disclosure Program. Including,
-              a <b>CGI command injection on a *.nasa.gov host</b>, For that finding NASA sent me
-              the letter of recognition shown here and added me to their Hall of Fame.
+              In June 2026 I reported several <b>P1</b> vulnerabilities (NASA's highest priority category)
+              through its Vulnerability Disclosure Program. One was a <b>CGI command injection on a
+              *.nasa.gov host</b>. NASA sent the letter shown here and added me to its Hall of Fame.
             </p>
           </div>
         </li>

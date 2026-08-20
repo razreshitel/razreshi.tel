@@ -30,9 +30,10 @@
       <span class="proj-eyebrow"><span class="dot"></span> PROJECT / hexploritel</span>
       <h1 class="proj-title">HexPlor'itel</h1>
       <p class="proj-lede">
-        An Android map application that keeps a record of where you have actually walked.
-        Draw an area and it fills with hexagons that clear as you physically pass through them.
-        Supports track recording, GPX import and export, and Google Timeline import.
+        An Android map that records where you have been. A selected area fills with hexagons that disappear
+        as you move, adding a <strong>progressive exploration</strong> layer. Key features include
+        <strong>GPS spoofing resistance, Google Timeline import, and offline maps from arbitrary sources.</strong><br>
+        Track recording and GPX import and export are also supported.
       </p>
 
       <div class="proj-tags">
@@ -40,8 +41,6 @@
         <span class="chip">Jetpack Compose</span>
         <span class="chip">MapLibre Native / PMTiles</span>
         <span class="chip">Uber H3</span>
-        <span class="chip">Room</span>
-        <span class="chip">offline-first</span>
         <span class="chip">GPX</span>
       </div>
 
@@ -50,7 +49,7 @@
     <!-- ============ WHAT IT DOES ============ -->
     <section class="proj-section">
       <div class="proj-section__head">
-        <h2>What it does</h2>
+        <h2>Features</h2>
         <span>06 features</span>
       </div>
 
@@ -61,7 +60,7 @@
             <h3>Uncover the map on foot</h3>
             <p>
               Draw an area anywhere on the map and it fills with grey hexagons. They clear wherever you
-              physically walk, so the map opens up only where you have actually been. You can redraw or
+              have physically been, so the map opens only in visited locations. You can redraw or
               delete an area later without losing the ground you have already covered.
             </p>
           </div>
@@ -98,7 +97,7 @@
             <p>
               A configurable filter chain rejects fake, mocked, and physically impossible position
               fixes, so distance, routes, and coverage stay accurate even in areas with heavy
-              GPS spoofing.
+              GPS spoofing. It remains active while a track is being recorded.
             </p>
           </div>
         </div>
@@ -186,7 +185,7 @@
     <!-- ============ SPEC ============ -->
     <section class="proj-section">
       <div class="proj-section__head">
-        <h2>Datasheet</h2>
+        <h2>Components</h2>
         <span>v0.3 beta</span>
       </div>
 
@@ -197,7 +196,7 @@
         <div class="spec__row"><div class="spec__k">Coverage</div><div class="spec__v"><b>Uber H3</b> res-11 visited cells, zoom-driven display resolution</div></div>
         <div class="spec__row"><div class="spec__k">Storage</div><div class="spec__v"><b>Room</b> local-only, excluded from cloud and adb backup</div></div>
         <div class="spec__row"><div class="spec__k">Interchange</div><div class="spec__v"><b>GPX 1.1</b> import and export, full zip backup and restore</div></div>
-        <div class="spec__row"><div class="spec__k">Status</div><div class="spec__v"><b>Beta</b> daily driver on my own device</div></div>
+        <div class="spec__row"><div class="spec__k">Status</div><div class="spec__v"><b>Beta</b> currently distributed privately</div></div>
       </div>
       <p class="proj-credit">Map data © OpenStreetMap contributors, basemap by Protomaps</p>
     </section>

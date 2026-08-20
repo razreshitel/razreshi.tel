@@ -30,13 +30,19 @@
       <span class="proj-eyebrow"><span class="dot"></span> PROJECT / flipper-tg</span>
       <h1 class="proj-title">Telegram bot bridge for Flipper&nbsp;Zero</h1>
       <p class="proj-lede">
-        Read and send Telegram messages directly from a Flipper Zero's screen.
-        A self-hosted FastAPI server on a Raspberry Pi talks to a custom FAP application over an
-        ESP32 Wi-Fi bridge, with Cyrillic transliteration, paginated chats, and an on-device keyboard.<br>
+        Read and send Telegram messages directly from a Flipper Zero's screen. A FastAPI server on a
+        Raspberry Pi connects to the FAP application through an ESP32 Wi-Fi bridge.
         <br>
-        Every message the bot sees is stored in the server's database. <br>
+        The Flipper application includes an on-device keyboard, Cyrillic transliteration, paginated chats,
+        and full end-to-end message encryption.
+        <br>
+        <br>
+        Every message available to the bot is stored in the server database.
+        <br>
         Traffic between the server and the Flipper is encrypted with a shared secret,
         and a web UI allows browsing and deleting stored messages from a browser.
+        <br>
+        If Telegram access is normally blocked, only the server needs a VPN.
       </p>
 
       <div class="proj-tags">
@@ -45,7 +51,6 @@
         <span class="chip">SQLite</span>
         <span class="chip">ESP32</span>
         <span class="chip">Raspberry Pi</span>
-        <span class="chip">self-hosted</span>
       </div>
 
       <div class="proj-actions">

@@ -28,31 +28,28 @@
 
     <section class="proj-hero">
       <span class="proj-eyebrow"><span class="dot"></span> ПРОЕКТ / ksp-autopilot</span>
-      <h1 class="proj-title">Автономные ракеты в Kerbal Space Program</h1>
+      <h1 class="proj-title">Авто-посадка ракет в Kerbal Space Program</h1>
       <p class="proj-lede">
-        Скрипты автопилота на Python управляют ракетами в Kerbal Space Program без участия человека через мод kRPC: телеметрия и команды управления передаются по TCP. Один скрипт выводит аппарат на устойчивую орбиту, второй возвращает ускоритель к мягкой вертикальной посадке возле площадки, пока верхняя ступень выходит на орбиту. Работа проверена в игре в 25 автономных полетах. Это личный проект, а не продукт.
+        Скрипты автопилота на Python управляют ракетами в Kerbal Space Program без участия человека через мод kRPC: телеметрия и команды управления передаются по TCP. Один скрипт выводит аппарат на устойчивую орбиту, второй включает в себя первый, но дополнительно возвращает ускоритель к мягкой вертикальной посадке возле площадки, пока верхняя ступень выходит на орбиту. Работа проверена в игре в 25 автономных полетах. В данный моент является личным проектом, а не публичным продуктом.
       </p>
 
       <div class="proj-tags">
         <span class="chip">Python</span>
         <span class="chip">kRPC</span>
-        <span class="chip">наведение и управление</span>
         <span class="chip">PID / vis-viva</span>
-        <span class="chip">без компьютерного зрения</span>
-        <span class="chip">только телеметрия</span>
       </div>
     </section>
 
     <!-- ============ WHAT IT DOES ============ -->
     <section class="proj-section">
       <div class="proj-section__head">
-        <h2>Что делает</h2>
+        <h2>Скрипты</h2>
         <span>02 скрипта</span>
       </div>
 
       <div class="writeup">
         <div class="feat">
-          <div class="feat__k"><span class="n">01</span> Орбита</div>
+          <div class="feat__k"><span class="n">01</span> Запуск на орбиту</div>
           <div>
             <h3>Выход на устойчивую орбиту</h3>
             <p>
@@ -65,7 +62,7 @@
         </div>
 
         <div class="feat">
-          <div class="feat__k"><span class="n">02</span> Возврат</div>
+          <div class="feat__k"><span class="n">02</span> Запуск и возврат</div>
           <div>
             <h3>Запуск и возврат ускорителя</h3>
             <p>
@@ -82,8 +79,8 @@
     <!-- ============ FLIGHT FOOTAGE ============ -->
     <section class="proj-section">
       <div class="proj-section__head">
-        <h2>Запись полета</h2>
-        <span>второй запуск / полная миссия</span>
+        <h2>Запись полного полета</h2>
+        <span>второй скрипт / полная миссия</span>
       </div>
 
       <figure class="proj-figure">
@@ -105,14 +102,14 @@
     <!-- ============ SENSOR-ONLY PRINCIPLE ============ -->
     <section class="proj-section">
       <div class="proj-section__head">
-        <h2>Ограничение</h2>
+        <h2>Ограничения</h2>
         <span>только телеметрия</span>
       </div>
 
       <div class="principle">
         <h3>Полет только по бортовым данным</h3>
         <p>
-          Автопилот получает только данные, доступные реальному бортовому компьютеру, а остальные значения рассчитывает сам: параметры орбиты, время до апоцентра, момент посадочного импульса и прогноз точки падения с учетом сопротивления воздуха.
+          Автопилот получает <strong>только</strong> данные, доступные реальному бортовому компьютеру, а остальные значения рассчитывает сам: параметры орбиты, время до апоцентра, момент посадочного импульса и прогноз точки падения с учетом сопротивления воздуха.
         </p>
         <div class="principle__cols">
           <div class="principle__col principle__col--use">
@@ -142,18 +139,18 @@
     <!-- ============ DATASHEET ============ -->
     <section class="proj-section">
       <div class="proj-section__head">
-        <h2>Характеристики</h2>
+        <h2>Компоненты</h2>
         <span>классическое наведение</span>
       </div>
 
       <div class="spec">
         <div class="spec__row"><div class="spec__k">Интерфейс</div><div class="spec__v"><b>kRPC</b> через TCP, RPC и потоки телеметрии</div></div>
-        <div class="spec__row"><div class="spec__k">Наведение</div><div class="spec__v"><b>vis-viva</b> программа гравитационного разворота и расчет посадочного импульса</div></div>
+        <div class="spec__row"><div class="spec__k">Наведение</div><div class="spec__v"><b>vis-viva формула</b> программа гравитационного разворота и расчет посадочного импульса</div></div>
         <div class="spec__row"><div class="spec__k">Управление</div><div class="spec__v"><b>ПИД-регуляторы</b> ограничение скорости поворота и маховики без управления вектором тяги</div></div>
         <div class="spec__row"><div class="spec__k">Датчики</div><div class="spec__v"><b>Только бортовое состояние</b> положение, скорость, масса, тяга, топливо, ориентация, радиовысота и собственная модель сопротивления</div></div>
         <div class="spec__row"><div class="spec__k">Моды</div><div class="spec__v"><b>kRPC</b> и Physics Range Extender для одновременной симуляции разделенных ступеней</div></div>
-        <div class="spec__row"><div class="spec__k">Тесты</div><div class="spec__v"><b>около 93 тестов pytest</b> для математического слоя наведения</div></div>
-        <div class="spec__row"><div class="spec__k">Статус</div><div class="spec__v"><b>Проверено в игре</b> ускоритель вернулся вертикально и без повреждений</div></div>
+        <div class="spec__row"><div class="spec__k">Тесты</div><div class="spec__v"><b>93 теста pytest</b> для математического слоя наведения</div></div>
+        <div class="spec__row"><div class="spec__k">Статус</div><div class="spec__v"><b>Проверено на >25 полетах</b> ускоритель возвращается вертикально и без повреждений</div></div>
       </div>
     </section>
   </div>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
-  <title>Autonomous rockets in KSP</title>
+  <title>Automated rocket landing in KSP</title>
   <meta name="description" content="Python autopilots for autonomous launch, orbit insertion, and booster recovery in Kerbal Space Program." />
   <link rel="canonical" href="https://razreshi.tel/projects/ksp-autopilot" />
   <link rel="alternate" hreflang="en" href="https://razreshi.tel/projects/ksp-autopilot" />
@@ -28,37 +28,34 @@
 
     <section class="proj-hero">
       <span class="proj-eyebrow"><span class="dot"></span> PROJECT / ksp-autopilot</span>
-      <h1 class="proj-title">Autonomous rockets in Kerbal Space Program</h1>
+      <h1 class="proj-title">Automated rocket landing in Kerbal Space Program</h1>
       <p class="proj-lede">
         Python autopilot scripts that fly rockets in Kerbal Space Program without human
         input, driving the game live over the kRPC mod: telemetry streams out, control
         commands stream in, over TCP.
-        Two scripts do the work: one launches a vessel to a permanent, stable orbit; the other
-        flies a booster back to a soft upright landing near the pad while the upper stage reaches
-        orbit on the same flight. Verified in-game across 25 autonomous flights.
-        A hobby project, not a product.
+        One script launches a vessel into a permanent, stable orbit. The second includes the first
+        and also returns the booster to a soft upright landing near the pad while the upper stage
+        reaches orbit. Verified in-game across 25 autonomous flights. It is currently a personal
+        project rather than a public product.
       </p>
 
       <div class="proj-tags">
         <span class="chip">Python</span>
         <span class="chip">kRPC</span>
-        <span class="chip">guidance &amp; control</span>
         <span class="chip">PID / vis-viva</span>
-        <span class="chip">no computer vision</span>
-        <span class="chip">sensor-only</span>
       </div>
     </section>
 
     <!-- ============ WHAT IT DOES ============ -->
     <section class="proj-section">
       <div class="proj-section__head">
-        <h2>What it does</h2>
+        <h2>Scripts</h2>
         <span>02 scripts</span>
       </div>
 
       <div class="writeup">
         <div class="feat">
-          <div class="feat__k"><span class="n">01</span> Orbit</div>
+          <div class="feat__k"><span class="n">01</span> Launch to orbit</div>
           <div>
             <h3>Launch to a permanent orbit</h3>
             <p>
@@ -76,7 +73,7 @@
         </div>
 
         <div class="feat">
-          <div class="feat__k"><span class="n">02</span> Recover</div>
+          <div class="feat__k"><span class="n">02</span> Launch and recover</div>
           <div>
             <h3>Launch and fly the booster back</h3>
             <p>
@@ -100,8 +97,8 @@
     <!-- ============ FLIGHT FOOTAGE ============ -->
     <section class="proj-section">
       <div class="proj-section__head">
-        <h2>Flight footage</h2>
-        <span>second run / full mission</span>
+        <h2>Full flight footage</h2>
+        <span>second script / full mission</span>
       </div>
 
       <figure class="proj-figure">
@@ -125,14 +122,14 @@
     <!-- ============ SENSOR-ONLY PRINCIPLE ============ -->
     <section class="proj-section">
       <div class="proj-section__head">
-        <h2>The constraint</h2>
+        <h2>Constraints</h2>
         <span>sensor-only</span>
       </div>
 
       <div class="principle">
         <h3>Sensor-only flight</h3>
         <p>
-          The autopilot reads only what a real flight computer could, then derives the rest
+          The autopilot reads <strong>only</strong> what a real flight computer could, then derives the rest
           itself: orbital elements, time to apoapsis, the landing burn, and a drag-aware
           prediction of where the booster will fall, the way real avionics would.
         </p>
@@ -164,18 +161,18 @@
     <!-- ============ DATASHEET ============ -->
     <section class="proj-section">
       <div class="proj-section__head">
-        <h2>Datasheet</h2>
+        <h2>Components</h2>
         <span>classical guidance</span>
       </div>
 
       <div class="spec">
         <div class="spec__row"><div class="spec__k">Interface</div><div class="spec__v"><b>kRPC</b> over TCP, RPC and telemetry streams</div></div>
-        <div class="spec__row"><div class="spec__k">Guidance</div><div class="spec__v"><b>vis-viva</b> gravity-turn pitch program, suicide-burn solver</div></div>
+        <div class="spec__row"><div class="spec__k">Guidance</div><div class="spec__v"><b>vis-viva equation</b> gravity-turn pitch program, suicide-burn solver</div></div>
         <div class="spec__row"><div class="spec__k">Control</div><div class="spec__v"><b>PID loops</b> slew-rate-limited attitude on reaction wheels (no gimbal)</div></div>
         <div class="spec__row"><div class="spec__k">Sensing</div><div class="spec__v"><b>Onboard state only</b> position, velocity, mass, thrust, fuel, attitude, radar altitude, in-house drag model</div></div>
         <div class="spec__row"><div class="spec__k">Mods</div><div class="spec__v"><b>kRPC</b> plus Physics Range Extender (keeps both stages simulated apart)</div></div>
-        <div class="spec__row"><div class="spec__k">Tests</div><div class="spec__v"><b>~93 pytest tests</b> over the pure-math guidance layer</div></div>
-        <div class="spec__row"><div class="spec__k">Status</div><div class="spec__v"><b>Verified in-game</b> booster recovered upright and intact</div></div>
+        <div class="spec__row"><div class="spec__k">Tests</div><div class="spec__v"><b>93 pytest tests</b> over the pure-math guidance layer</div></div>
+        <div class="spec__row"><div class="spec__k">Status</div><div class="spec__v"><b>Verified across &gt;25 flights</b> booster returns upright and intact</div></div>
       </div>
     </section>
   </div>
