@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+  <title>Canvas</title>
+  <meta name="description" content="Canvas, визуальное рабочее пространство для заметок, задач, файлов, диаграмм, таблиц и вложенных досок." />
+  <link rel="canonical" href="https://razreshi.tel/ru/projects/canvas-tool-local" />
+  <link rel="alternate" hreflang="en" href="https://razreshi.tel/projects/canvas-tool-local" />
+  <link rel="alternate" hreflang="ru" href="https://razreshi.tel/ru/projects/canvas-tool-local" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Jost:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body style="--accent:#b985f4;">
+  <div class="page">
+    <details class="lang-switch lang-switch--project">
+      <summary aria-label="Выбрать язык">RU</summary>
+      <nav class="lang-switch__menu" aria-label="Язык">
+        <a class="lang-switch__link" href="/projects/canvas-tool-local" lang="en" hreflang="en">English</a>
+        <a class="lang-switch__link" href="/ru/projects/canvas-tool-local" lang="ru" hreflang="ru" aria-current="page">Русский</a>
+      </nav>
+    </details>
+    <a class="back" href="../"><span>←</span> Ко всем проектам</a>
+
+    <section class="proj-hero">
+      <span class="proj-eyebrow"><span class="dot"></span> ПРОЕКТ / canvas-tool-local</span>
+      <h1 class="proj-title">Canvas</h1>
+      <p class="proj-lede">
+        Визуальное рабочее пространство для заметок, задач, файлов, диаграмм, таблиц, графиков и вложенных досок. Учетные записи, данные, общий доступ и загрузки остаются на вашем сервере.
+      </p>
+
+      <div class="proj-tags">
+        <span class="chip">Next.js</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">React</span>
+        <span class="chip">SQLite</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">свой сервер</span>
+      </div>
+
+      <div class="proj-actions proj-actions--with-access">
+        <a class="btn btn--primary" href="https://canvas.razreshi.tel:8443/" target="_blank" rel="noopener">Попробовать ↗</a>
+        <span class="proj-access">user: guess, pass: guess</span>
+      </div>
+
+    </section>
+
+    <!-- Features -->
+    <section class="proj-section">
+      <div class="proj-section__head">
+        <h2>Что делает</h2>
+        <span>рабочее пространство на своем сервере</span>
+      </div>
+
+      <div class="principle">
+        <h3>Визуальное пространство на своем сервере</h3>
+        <p>
+          Canvas объединяет бесконечную доску, структурированные карточки, вложенные пространства, поиск, историю изменений и закрытый общий доступ.
+        </p>
+        <div class="principle__cols">
+          <div class="principle__col principle__col--use">
+            <h4>Рабочее пространство</h4>
+            <ul>
+              <li>заметки, задачи, файлы, таблицы, графики и диаграммы</li>
+              <li>вложенные доски, индексированный поиск и восстановление версий</li>
+              <li>отдельный доступ к каждой доске и обновления в реальном времени</li>
+            </ul>
+          </div>
+          <div class="principle__col principle__col--use">
+            <h4>Сервер</h4>
+            <ul>
+              <li>служба Node.js с SQLite и локальным хранением файлов</li>
+              <li>HTTPS через Caddy и доступ к файлам после авторизации</li>
+              <li>атомарные обновления, откат и проверяемые резервные копии</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Datasheet -->
+    <section class="proj-section">
+      <div class="proj-section__head">
+        <h2>Характеристики</h2>
+        <span>рабочее пространство на своем сервере</span>
+      </div>
+
+      <div class="spec">
+        <div class="spec__row"><div class="spec__k">Интерфейс</div><div class="spec__v"><b>Next.js 16, React 19, TypeScript</b></div></div>
+        <div class="spec__row"><div class="spec__k">Среда</div><div class="spec__v"><b>Node.js 22</b>, автономная служба systemd</div></div>
+        <div class="spec__row"><div class="spec__k">Хранение</div><div class="spec__v"><b>SQLite и локальные файлы</b>, квоты учетных записей и сверка файлов</div></div>
+        <div class="spec__row"><div class="spec__k">Доступ</div><div class="spec__v"><b>Закрытые учетные записи и доступ к отдельным доскам</b>, синхронизация между сессиями в реальном времени</div></div>
+        <div class="spec__row"><div class="spec__k">Файлы</div><div class="spec__v"><b>Возобновляемые загрузки и предпросмотр файлов</b>, скачивание только после авторизации</div></div>
+        <div class="spec__row"><div class="spec__k">Эксплуатация</div><div class="spec__v"><b>Caddy HTTPS, health checks, atomic releases, rollback</b></div></div>
+        <div class="spec__row"><div class="spec__k">Резервные копии</div><div class="spec__v"><b>Ежедневные проверяемые архивы</b>, проверка целостности SQLite, внешних ключей, контрольных сумм и загруженных файлов</div></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="../../lightbox.js" defer></script>
+</body>
+</html>

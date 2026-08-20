@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+  <title>Автономные ракеты в KSP</title>
+  <meta name="description" content="Автопилоты на Python для автономного запуска, выхода на орбиту и возврата ускорителя в Kerbal Space Program." />
+  <link rel="canonical" href="https://razreshi.tel/ru/projects/ksp-autopilot" />
+  <link rel="alternate" hreflang="en" href="https://razreshi.tel/projects/ksp-autopilot" />
+  <link rel="alternate" hreflang="ru" href="https://razreshi.tel/ru/projects/ksp-autopilot" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Jost:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body style="--accent:#6e89f0;">
+  <div class="page">
+    <details class="lang-switch lang-switch--project">
+      <summary aria-label="Выбрать язык">RU</summary>
+      <nav class="lang-switch__menu" aria-label="Язык">
+        <a class="lang-switch__link" href="/projects/ksp-autopilot" lang="en" hreflang="en">English</a>
+        <a class="lang-switch__link" href="/ru/projects/ksp-autopilot" lang="ru" hreflang="ru" aria-current="page">Русский</a>
+      </nav>
+    </details>
+    <a class="back" href="../"><span>←</span> Ко всем проектам</a>
+
+    <section class="proj-hero">
+      <span class="proj-eyebrow"><span class="dot"></span> ПРОЕКТ / ksp-autopilot</span>
+      <h1 class="proj-title">Автономные ракеты в Kerbal Space Program</h1>
+      <p class="proj-lede">
+        Скрипты автопилота на Python управляют ракетами в Kerbal Space Program без участия человека через мод kRPC: телеметрия и команды управления передаются по TCP. Один скрипт выводит аппарат на устойчивую орбиту, второй возвращает ускоритель к мягкой вертикальной посадке возле площадки, пока верхняя ступень выходит на орбиту. Работа проверена в игре в 25 автономных полетах. Это личный проект, а не продукт.
+      </p>
+
+      <div class="proj-tags">
+        <span class="chip">Python</span>
+        <span class="chip">kRPC</span>
+        <span class="chip">наведение и управление</span>
+        <span class="chip">PID / vis-viva</span>
+        <span class="chip">без компьютерного зрения</span>
+        <span class="chip">только телеметрия</span>
+      </div>
+    </section>
+
+    <!-- ============ WHAT IT DOES ============ -->
+    <section class="proj-section">
+      <div class="proj-section__head">
+        <h2>Что делает</h2>
+        <span>02 скрипта</span>
+      </div>
+
+      <div class="writeup">
+        <div class="feat">
+          <div class="feat__k"><span class="n">01</span> Орбита</div>
+          <div>
+            <h3>Выход на устойчивую орбиту</h3>
+            <p>
+              <span class="mono">launch_to_orbit.py</span> проводит активный аппарат через гравитационный разворот и выполняет циркуляризацию в апоцентре, формируя устойчивую орбиту высотой 70-80 км. Поддерживаются одно- и двухступенчатые ракеты. Для двухступенчатой схемы первая ступень отделяется после выработки топлива, а вторая завершает выход на орбиту.
+            </p>
+            <p>
+              Целевая высота, завершение гравитационного разворота, запас топлива первой ступени и ускорение физики настраиваются через командную строку.
+            </p>
+          </div>
+        </div>
+
+        <div class="feat">
+          <div class="feat__k"><span class="n">02</span> Возврат</div>
+          <div>
+            <h3>Запуск и возврат ускорителя</h3>
+            <p>
+              <span class="mono">launch_and_recover.py</span> выполняет профиль двухступенчатой ракеты по типу Falcon 9: запуск и отделение первой ступени после достижения заданного остатка топлива, по умолчанию 30%. Затем обе ступени одновременно управляются в одном цикле. Ускоритель разворачивается, выполняет возвратный импульс, выпускает аэродинамические тормоза и мягко садится вертикально, пока вторая ступень продолжает выход на орбиту.
+            </p>
+            <p>
+              Лучший результат: ускоритель приземлился без повреждений с отклонением 0,3° от вертикали и скоростью снижения 2,85 м/с. В том же полете верхняя ступень вышла на устойчивую орбиту 70,5 × 84 км.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FLIGHT FOOTAGE ============ -->
+    <section class="proj-section">
+      <div class="proj-section__head">
+        <h2>Запись полета</h2>
+        <span>второй запуск / полная миссия</span>
+      </div>
+
+      <figure class="proj-figure">
+        <div class="proj-video">
+          <video controls preload="metadata" playsinline width="1280" height="720"
+                 poster="../../assets/ksp-autopilot/recover-poster.jpg">
+            <source src="../../assets/ksp-autopilot/recover.mp4" type="video/mp4" />
+            Браузер не поддерживает встроенное видео. Файл находится по адресу
+            <code>assets/ksp-autopilot/recover.mp4</code>.
+          </video>
+        </div>
+        <figcaption>
+          <span class="mk">REC</span>
+          <span><span class="mono">launch_and_recover.py</span> полная миссия: запуск, разделение ступеней и автономный возврат ускорителя к вертикальной посадке. Во вставке показан одновременный выход второй ступени на орбиту.</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ SENSOR-ONLY PRINCIPLE ============ -->
+    <section class="proj-section">
+      <div class="proj-section__head">
+        <h2>Ограничение</h2>
+        <span>только телеметрия</span>
+      </div>
+
+      <div class="principle">
+        <h3>Полет только по бортовым данным</h3>
+        <p>
+          Автопилот получает только данные, доступные реальному бортовому компьютеру, а остальные значения рассчитывает сам: параметры орбиты, время до апоцентра, момент посадочного импульса и прогноз точки падения с учетом сопротивления воздуха.
+        </p>
+        <div class="principle__cols">
+          <div class="principle__col principle__col--use">
+            <h4>Используются бортовые данные</h4>
+            <ul>
+              <li>положение и скорость (GPS / INS)</li>
+              <li>высота и радиовысота</li>
+              <li>вертикальная и полная скорость</li>
+              <li>масса, тяга и остаток топлива</li>
+              <li>ориентация</li>
+              <li>бортовая модель атмосферы и сопротивления</li>
+            </ul>
+          </div>
+          <div class="principle__col principle__col--deny">
+            <h4>Не используются данные игры</h4>
+            <ul>
+              <li>апоцентр и перицентр с карты</li>
+              <li>расчетная точка падения из игры</li>
+              <li>Δv узла маневра</li>
+              <li>данные, недоступные реальному ускорителю</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DATASHEET ============ -->
+    <section class="proj-section">
+      <div class="proj-section__head">
+        <h2>Характеристики</h2>
+        <span>классическое наведение</span>
+      </div>
+
+      <div class="spec">
+        <div class="spec__row"><div class="spec__k">Интерфейс</div><div class="spec__v"><b>kRPC</b> через TCP, RPC и потоки телеметрии</div></div>
+        <div class="spec__row"><div class="spec__k">Наведение</div><div class="spec__v"><b>vis-viva</b> программа гравитационного разворота и расчет посадочного импульса</div></div>
+        <div class="spec__row"><div class="spec__k">Управление</div><div class="spec__v"><b>ПИД-регуляторы</b> ограничение скорости поворота и маховики без управления вектором тяги</div></div>
+        <div class="spec__row"><div class="spec__k">Датчики</div><div class="spec__v"><b>Только бортовое состояние</b> положение, скорость, масса, тяга, топливо, ориентация, радиовысота и собственная модель сопротивления</div></div>
+        <div class="spec__row"><div class="spec__k">Моды</div><div class="spec__v"><b>kRPC</b> и Physics Range Extender для одновременной симуляции разделенных ступеней</div></div>
+        <div class="spec__row"><div class="spec__k">Тесты</div><div class="spec__v"><b>около 93 тестов pytest</b> для математического слоя наведения</div></div>
+        <div class="spec__row"><div class="spec__k">Статус</div><div class="spec__v"><b>Проверено в игре</b> ускоритель вернулся вертикально и без повреждений</div></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="../../lightbox.js" defer></script>
+</body>
+</html>

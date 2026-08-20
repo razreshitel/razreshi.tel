@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+  <title>Povtoritel</title>
+  <meta name="description" content="Povtoritel, локальное приложение Windows для мгновенных повторов и непрерывной записи экрана." />
+  <link rel="canonical" href="https://razreshi.tel/ru/projects/povtoritel" />
+  <link rel="alternate" hreflang="en" href="https://razreshi.tel/projects/povtoritel" />
+  <link rel="alternate" hreflang="ru" href="https://razreshi.tel/ru/projects/povtoritel" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Jost:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body style="--accent:#e96b5d;">
+  <div class="page">
+    <details class="lang-switch lang-switch--project">
+      <summary aria-label="Выбрать язык">RU</summary>
+      <nav class="lang-switch__menu" aria-label="Язык">
+        <a class="lang-switch__link" href="/projects/povtoritel" lang="en" hreflang="en">English</a>
+        <a class="lang-switch__link" href="/ru/projects/povtoritel" lang="ru" hreflang="ru" aria-current="page">Русский</a>
+      </nav>
+    </details>
+    <a class="back" href="../"><span>←</span> Ко всем проектам</a>
+
+    <section class="proj-hero">
+      <span class="proj-eyebrow"><span class="dot"></span> ПРОЕКТ / povtoritel</span>
+      <h1 class="proj-title">Povtoritel</h1>
+      <p class="proj-lede">
+        Приложение Windows для мгновенных повторов и непрерывной записи экрана. Последние минуты хранятся в оперативной памяти, сохраняются в MP4 по запросу, а управление доступно из системного трея.
+      </p>
+
+      <div class="proj-tags">
+        <span class="chip">Python</span>
+        <span class="chip">Windows</span>
+        <span class="chip">FFmpeg</span>
+        <span class="chip">Desktop Duplication</span>
+        <span class="chip">аппаратное кодирование</span>
+        <span class="chip">только локально</span>
+      </div>
+
+      <div class="proj-actions">
+        <a class="btn btn--primary" href="https://github.com/razreshitel/povtoritel" target="_blank" rel="noopener">Открыть на GitHub ↗</a>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="proj-section">
+      <div class="proj-section__head">
+        <h2>Что делает</h2>
+        <span>локальный захват</span>
+      </div>
+
+      <div class="principle">
+        <h3>Повтор и запись из одного конвейера захвата</h3>
+        <p>
+          Povtoritel хранит последние 1-10 минут в оперативной памяти и сохраняет буфер в MP4 глобальной горячей клавишей. При необходимости тот же конвейер ведет непрерывную запись.
+        </p>
+        <div class="principle__cols">
+          <div class="principle__col principle__col--use">
+            <h4>Мгновенный повтор</h4>
+            <ul>
+              <li>буфер на 1-10 минут в оперативной памяти</li>
+              <li>сохранение уже произошедшего момента</li>
+              <li>аппаратное кодирование NVIDIA или AMD</li>
+            </ul>
+          </div>
+          <div class="principle__col principle__col--use">
+            <h4>Непрерывная запись</h4>
+            <ul>
+              <li>запуск и остановка глобальной горячей клавишей</li>
+              <li>звук рабочего стола, микрофона и отдельных приложений</li>
+              <li>локальная запись MP4 с управлением из системного трея</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Datasheet -->
+    <section class="proj-section">
+      <div class="proj-section__head">
+        <h2>Характеристики</h2>
+        <span>приложение Windows</span>
+      </div>
+
+      <div class="spec">
+        <div class="spec__row"><div class="spec__k">Платформа</div><div class="spec__v"><b>Windows 10 or 11</b>, Python 3.12 или новее</div></div>
+        <div class="spec__row"><div class="spec__k">Захват</div><div class="spec__v"><b>FFmpeg Desktop Duplication</b>, один выбранный дисплей</div></div>
+        <div class="spec__row"><div class="spec__k">Кодирование</div><div class="spec__v"><b>NVIDIA NVENC or AMD AMF</b>, аппаратное кодирование H.264</div></div>
+        <div class="spec__row"><div class="spec__k">Повтор</div><div class="spec__v"><b>1-10 минут в оперативной памяти</b>, сохранение MP4 по запросу</div></div>
+        <div class="spec__row"><div class="spec__k">Частота кадров</div><div class="spec__v"><b>30, 60, 120 или 144 FPS</b></div></div>
+        <div class="spec__row"><div class="spec__k">Звук</div><div class="spec__v"><b>микс рабочего стола, микрофон и дорожки отдельных приложений</b></div></div>
+        <div class="spec__row"><div class="spec__k">Управление</div><div class="spec__v"><b>системный трей, глобальные горячие клавиши и автозапуск</b>, автоматическое восстановление после отключения дисплея</div></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="../../lightbox.js" defer></script>
+</body>
+</html>

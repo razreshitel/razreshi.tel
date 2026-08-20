@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+  <title>Мост Telegram для Flipper Zero</title>
+  <meta name="description" content="Локальный мост Telegram для чтения и отправки сообщений с Flipper Zero." />
+  <link rel="canonical" href="https://razreshi.tel/ru/projects/flipper-tg" />
+  <link rel="alternate" hreflang="en" href="https://razreshi.tel/projects/flipper-tg" />
+  <link rel="alternate" hreflang="ru" href="https://razreshi.tel/ru/projects/flipper-tg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Jost:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body style="--accent:#f5824a;">
+  <div class="page">
+    <details class="lang-switch lang-switch--project">
+      <summary aria-label="Выбрать язык">RU</summary>
+      <nav class="lang-switch__menu" aria-label="Язык">
+        <a class="lang-switch__link" href="/projects/flipper-tg" lang="en" hreflang="en">English</a>
+        <a class="lang-switch__link" href="/ru/projects/flipper-tg" lang="ru" hreflang="ru" aria-current="page">Русский</a>
+      </nav>
+    </details>
+    <a class="back" href="../"><span>←</span> Ко всем проектам</a>
+
+    <section class="proj-hero">
+      <span class="proj-eyebrow"><span class="dot"></span> ПРОЕКТ / flipper-tg</span>
+      <h1 class="proj-title">Мост Telegram для Flipper&nbsp;Zero</h1>
+      <p class="proj-lede">
+        Чтение и отправка сообщений Telegram прямо с экрана Flipper Zero. Сервер FastAPI на Raspberry Pi связывается с приложением FAP через Wi-Fi-мост на ESP32, поддерживает транслитерацию кириллицы, постраничные чаты и экранную клавиатуру.<br>
+        <br>
+        Все сообщения, доступные боту, сохраняются в базе данных сервера. <br>
+        Трафик между сервером и Flipper шифруется общим секретом. Веб-интерфейс позволяет просматривать и удалять сохраненные сообщения.
+      </p>
+
+      <div class="proj-tags">
+        <span class="chip">C (Flipper FAP)</span>
+        <span class="chip">Python / FastAPI</span>
+        <span class="chip">SQLite</span>
+        <span class="chip">ESP32</span>
+        <span class="chip">Raspberry Pi</span>
+        <span class="chip">свой сервер</span>
+      </div>
+
+      <div class="proj-actions">
+        <a class="btn btn--primary" href="https://github.com/razreshitel/flipper-tg" target="_blank" rel="noopener">Открыть на GitHub ↗</a>
+      </div>
+    </section>
+
+    <!-- <div class="proj-soon">
+      <div class="soon-icon">✶</div>
+      <div>
+        <strong>Full write-up coming soon</strong>
+        Architecture diagrams, the FAP UI on the 128×64 display, the Cyrillic
+        transliteration trick, and the self-signed HTTPS setup will live here.
+      </div>
+    </div> -->
+  </div>
+
+  <script src="../../lightbox.js" defer></script>
+</body>
+</html>
